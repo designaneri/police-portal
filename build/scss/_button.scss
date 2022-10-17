@@ -38,6 +38,9 @@ button:focus {
         box-shadow: none;
     }    
 }
+.btn-primary:not([href]):not([tabindex]), .btn-primary:not([href]):not([tabindex]):focus, .btn-primary:not([href]):not([tabindex]):hover{
+    color: $color-white;
+}
 .btn-primary.disabled, .btn-primary:disabled{
     background-color: $primary;
     color: $color-white;
