@@ -1,0 +1,83 @@
+
+// ===============
+//  Buttons Start
+// ===============
+
+button:focus {
+    outline: none;
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+.btn{
+    border-radius: 0px;  
+    padding: 7px 20px 8px 20px;  
+    text-transform: capitalize;
+    transition: 0.3s all ease;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    i{
+        margin: 0 10px 0px 0;
+        font-size: 14px;
+        // vertical-align: middle;
+    }
+}
+.btn-primary{
+    @extend .btn;
+    background-color: $primary;
+    color: $color-white;
+    border: 1px solid $primary;
+    &:hover,&:focus,&:active,&:not(:disabled):not(.disabled):active{
+        border: 1px solid $primary;
+        color: $color-white;
+        transition: 0.3s all ease;
+        box-shadow: none;
+    }    
+}
+.btn-primary.disabled, .btn-primary:disabled{
+    background-color: $primary;
+    color: $color-white;
+    border: 1px solid $primary;
+}
+
+.btn-light{
+    @extend .btn;
+    color: $color-black;
+    border-width: 1px;
+    border-style: solid;
+}
+.btn-small{
+    font-size: 14px;
+    padding: 7px 12px;
+     i{
+        margin: 0 5px 0px 0;
+        font-size: 12px;
+    }
+}
+.btn-wrap{
+    text-align: right;
+    border-top: 1px solid $gray-400;
+    padding-top: 20px;
+    .btn{
+        &+ .btn{
+            margin-left: 10px;
+        }
+    }
+}
+.save-cancel-wrap{
+    border-top: 0;
+    text-align: left; 
+    .btn{
+        min-width: 100px;
+    }
+}
+.tab-btn-wrap{
+    display: flex;
+    justify-content:space-between;
+    background: $color-white;
+    border: 0;
+}

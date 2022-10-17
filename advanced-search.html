@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HRPS">
+  <meta name="keywords" content="HRPS">
+  <meta name="author" content="HRPS">
+  <link rel="icon" href="img/fav_icon.ico" type="image/x-icon" />
+  <title>HRPS</title>
+
+  <!--Google font-->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+  <!-- Jquery Datatables -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.11.3/datatables.min.css"/>
+
+
+  <!-- Theme css -->
+  <!-- <link rel="stylesheet" type="text/css" href="dist/css/jquery.bs4-scrolling-tabs.min.css"> -->
+  <link rel="stylesheet" type="text/css" href="plugins/datepicker/datepicker3.css">
+  <link rel="stylesheet" type="text/css" href="dist/css/style.css">
+</head>
+
+<body>
+
+    <section class="main_section">
+        
+        <!-- Side menu end -->
+        <div class="side-menu" id="sidemenu">
+
+            <div class="logo-img">
+                <a class="" href="#"><img class="img-fluid" src="dist/img/logo.png" /></a>
+                <a href="#" class="menu-close d-md-none"><i class="icon-times"></i></a>
+            </div>
+            <div class="menu-sec">
+                <ul>
+                    <li class="active">
+                        <a href="dashboard.html"><span class="icon icon-dashboard"></span> Dashboard</a>
+                    </li>
+                    <li class="">
+                        <a href="advanced-search.html"><span class="icon icon-search"></span> Advanced Search</a>
+                    </li>
+                    <li class="">
+                        <a href="files.html"><span class="icon icon-files"></span> Files</a>
+                    </li>
+                    <li class="">
+                        <a href="intelligence-reports.html"><span class="icon icon-incident-reports"></span>Intelligence Reports</a>
+                    </li>
+                    <li class="">
+                        <a href="people.html"><span class="icon icon-people"></span> People</a>
+                    </li>
+                    <li class="">
+                        <a href="organizations.html"><span class="icon icon-organizations"></span> Organizations</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Side menu start -->
+
+        <!-- Main section start -->
+        <div class="main_components" id="maincomponents">
+
+            <!-- Header Start -->
+            <header>
+                <nav class="navbar">
+                    <div class="container-fluid p-0">
+                      
+                        <div class="me-auto">
+                            <button class="btn menu-btns" id="menubtns"><i class="icon-menu"></i></button>
+                        </div>
+                        
+                        <!-- <div class="dropdown user-dropdown">
+                            <button class="btn dropdown-toggle header-info" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                              <img class="img-fluid" src="https://images.pexels.com/photos/5324923/pexels-photo-5324923.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" /> <span>Devid1988</span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </div> -->
+                        <div class="user-info"><i class="icon-user-circle mr-2"></i>Devid1988</div>
+                    </div>
+                  </nav>
+
+            </header>
+            <!-- Header End -->
+<!-- Breadcrumbs Start -->
+<div class="breadcrumbs">
+    <ul>
+        <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+        <li class="breadcrumb-item">Advanced Search</li>
+    </ul>
+</div>
+<!-- Breadcrumbs End -->
+<!-- Card section start -->
+<div class="inner-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-section">
+                    <h3>Advanced Search</h3>
+                </div>
+            </div>
+            <!-- Main Table Start -->
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="bordered-card">
+                            <h4 class="mb-4">Criteria</h4>
+                            <div class="row">
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="form-group">
+                                        <label class="form-label required">Entity Type</label>
+                                        <select class="form-control select2" data-placeholder="Select">
+                                            <option value=""></option>
+                                            <option selected>Person</option>
+                                            <option>option2</option>
+                                            <option>option3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="form-group">
+                                        <label class="form-label">Select Field</label>
+                                        <select class="form-control select2" data-placeholder="Select">
+                                            <option value=""></option>
+                                            <option>option1</option>
+                                            <option>option2</option>
+                                            <option>option3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="form-group">
+                                        <label class="form-label required">Operator</label>
+                                        <select class="form-control select2" data-placeholder="Select">
+                                            <option value=""></option>
+                                            <option>option1</option>
+                                            <option>option2</option>
+                                            <option>option3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="form-group">
+                                        <label class="form-label">Value</label>
+                                        <select class="form-control select2" data-placeholder="Select">
+                                            <option value=""></option>
+                                            <option>option1</option>
+                                            <option>option2</option>
+                                            <option>option3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label class="form-label required">And/Or</label>
+                                        <select class="form-control select2" data-placeholder="Select">
+                                            <option value=""></option>
+                                            <option selected>And</option>
+                                            <option>Or</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-9 text-right align-self-end">
+                                    <div class="form-group"><button class="btn btn-light">
+                                        Remove
+                                    </button></div>
+                                </div>
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="form-group">
+                                        <label class="form-label required">Entity Type</label>
+                                        <select class="form-control select2" data-placeholder="Select">
+                                            <option value=""></option>
+                                            <option selected>Person</option>
+                                            <option>option2</option>
+                                            <option>option3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="form-group">
+                                        <label class="form-label">Select Field</label>
+                                        <select class="form-control select2" data-placeholder="Select">
+                                            <option value=""></option>
+                                            <option>option1</option>
+                                            <option>option2</option>
+                                            <option>option3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="form-group">
+                                        <label class="form-label required">Operator</label>
+                                        <select class="form-control select2" data-placeholder="Select">
+                                            <option value=""></option>
+                                            <option>option1</option>
+                                            <option>option2</option>
+                                            <option>option3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="form-group">
+                                        <label class="form-label">Value</label>
+                                        <select class="form-control select2" data-placeholder="Select">
+                                            <option value=""></option>
+                                            <option>option1</option>
+                                            <option>option2</option>
+                                            <option>option3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bordered-card-footer">
+                                <a href="#"><i class="icon-plus mr-2"></i>Add Criteria</a>
+                            </div>
+                        </div>
+                        <div class="bordered-card mt-4">
+                            <h5 class="mb-3">Results Include</h5>
+                            <label class="custom-checkbox" for="search1">Files
+                                <input type="checkbox" id="search1">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="custom-checkbox" for="search2">People
+                                <input type="checkbox" id="search2">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="custom-checkbox" for="search3">Organization
+                                <input type="checkbox" id="search3">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="custom-checkbox" for="search4">Weapons
+                                <input type="checkbox" id="search4">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="custom-checkbox" for="search5">Vehicles
+                                <input type="checkbox" id="search5">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="btn-wrap save-cancel-wrap">
+                            <button class="btn btn-primary">Search</button>
+                        </div>
+                        <div class="search-results mt-5">
+                            <div class="nav-tabs-wrap">
+                                <ul class="nav nav-tabs badge-style" id="SearchFile" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="files-tab" data-toggle="tab" href="#files" role="tab" aria-controls="files" aria-selected="true">Files</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="people-tab" data-toggle="tab" href="#people" role="tab" aria-controls="people" aria-selected="false">People</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="Organization-tab" data-toggle="tab" href="#Organization" role="tab" aria-controls="Organization" aria-selected="false">Organization</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="Weapons-tab" data-toggle="tab" href="#Weapons" role="tab" aria-controls="Weapons" aria-selected="false">Weapons</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="Vehicles-tab" data-toggle="tab" href="#Vehicles" role="tab" aria-controls="Vehicles" aria-selected="false">Vehicles</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-content" id="SearchFileContent">
+                                <div class="tab-pane fade show active" id="files" role="tabpanel" aria-labelledby="files-tab">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="custom-table ">
+                                                <div class="table-responsive">
+                                                    <table id="exampletwo" class="table table-striped" style="width:100%">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>File Number</th>
+                                                                <th>Created Date</th>
+                                                                <th>Created By</th>
+                                                                <th>Actions</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>2021-0011</td>
+                                                                <td>2021-09-15</td>
+                                                                <td>Paul</td>
+                                                                <td>
+                                                                    <div class="action-btns">
+                                                                        <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                                        <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2021-0011</td>
+                                                                <td>2021-09-15</td>
+                                                                <td>Paul</td>
+                                                                <td>
+                                                                    <div class="action-btns">
+                                                                        <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                                        <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2021-0011</td>
+                                                                <td>2021-09-15</td>
+                                                                <td>Paul</td>
+                                                                <td>
+                                                                    <div class="action-btns">
+                                                                        <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                                        <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2021-0011</td>
+                                                                <td>2021-09-15</td>
+                                                                <td>Paul</td>
+                                                                <td>
+                                                                    <div class="action-btns">
+                                                                        <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                                        <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2021-0011</td>
+                                                                <td>2021-09-15</td>
+                                                                <td>Paul</td>
+                                                                <td>
+                                                                    <div class="action-btns">
+                                                                        <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                                        <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2021-0011</td>
+                                                                <td>2021-09-15</td>
+                                                                <td>Paul</td>
+                                                                <td>
+                                                                    <div class="action-btns">
+                                                                        <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                                        <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2021-0011</td>
+                                                                <td>2021-09-15</td>
+                                                                <td>Paul</td>
+                                                                <td>
+                                                                    <div class="action-btns">
+                                                                        <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                                        <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2021-0011</td>
+                                                                <td>2021-09-15</td>
+                                                                <td>Paul</td>
+                                                                <td>
+                                                                    <div class="action-btns">
+                                                                        <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                                        <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2021-0011</td>
+                                                                <td>2021-09-15</td>
+                                                                <td>Paul</td>
+                                                                <td>
+                                                                    <div class="action-btns">
+                                                                        <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                                        <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2021-0011</td>
+                                                                <td>2021-09-15</td>
+                                                                <td>Paul</td>
+                                                                <td>
+                                                                    <div class="action-btns">
+                                                                        <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                                        <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="people" role="tabpanel" aria-labelledby="people-tab">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="title-section inner-title">
+                                                <h3>Narrative Statements</h3>
+                                                <a class="btn-primary btn-small" data-toggle="modal" data-target="#addNarrativeModal"><i class="icon-plus"></i> Add</a>
+                                            </div>
+                                            <div class="custom-table custom-table-sm">
+                                                <div class="table-responsive">
+                                                    <table id="exampletwo" class="table table-striped" style="width:100%">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Narrative Statements</th>
+                                                                <th>Source</th>
+                                                                <th>Reliability</th>
+                                                                <th class="no-sort">Actions</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Playground Memory</td>
+                                                                <td>Memory</td>
+                                                                <td>Evidence Level</td>
+                                                                <td>
+                                                                    <div class="action-btns">
+                                                                        <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                                        <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Traveling to India for the First Time</td>
+                                                                <td>Traveling</td>
+                                                                <td>Relevant Endpoint</td>
+                                                                <td>
+                                                                    <div class="action-btns">
+                                                                        <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                                        <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Memorable Experience</td>
+                                                                <td>Memorable</td>
+                                                                <td>Literature Search</td>
+                                                                <td>
+                                                                    <div class="action-btns">
+                                                                        <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                                        <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Playground Memory</td>
+                                                                <td>Memory</td>
+                                                                <td>Evidence Level</td>
+                                                                <td>
+                                                                    <div class="action-btns">
+                                                                        <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                                        <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Traveling to India for the First Time</td>
+                                                                <td>Traveling</td>
+                                                                <td>Relevant Endpoint</td>
+                                                                <td>
+                                                                    <div class="action-btns">
+                                                                        <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                                        <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Memorable Experience</td>
+                                                                <td>Memorable</td>
+                                                                <td>Literature Search</td>
+                                                                <td>
+                                                                    <div class="action-btns">
+                                                                        <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                                        <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Playground Memory</td>
+                                                                <td>Memory</td>
+                                                                <td>Evidence Level</td>
+                                                                <td>
+                                                                    <div class="action-btns">
+                                                                        <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                                        <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Traveling to India for the First Time</td>
+                                                                <td>Traveling</td>
+                                                                <td>Relevant Endpoint</td>
+                                                                <td>
+                                                                    <div class="action-btns">
+                                                                        <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                                        <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Memorable Experience</td>
+                                                                <td>Memorable</td>
+                                                                <td>Literature Search</td>
+                                                                <td>
+                                                                    <div class="action-btns">
+                                                                        <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                                        <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Playground Memory</td>
+                                                                <td>Memory</td>
+                                                                <td>Evidence Level</td>
+                                                                <td>
+                                                                    <div class="action-btns">
+                                                                        <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                                        <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Traveling to India for the First Time</td>
+                                                                <td>Traveling</td>
+                                                                <td>Relevant Endpoint</td>
+                                                                <td>
+                                                                    <div class="action-btns">
+                                                                        <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                                        <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Memorable Experience</td>
+                                                                <td>Memorable</td>
+                                                                <td>Literature Search</td>
+                                                                <td>
+                                                                    <div class="action-btns">
+                                                                        <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                                        <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="Organization" role="tabpanel" aria-labelledby="Organization-tab">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="card-inner">
+                                                <div class="title-section inner-title">
+                                                    <h3>Dissemination List</h3>
+                                                    <a class="btn-primary btn-small" data-toggle="modal" data-target="#addDisseminationModal"><i class="icon-plus"></i> Add</a>
+                                                </div>
+                                                <div class="custom-table custom-table-sm">
+                                                    <div class="table-responsive">
+                                                        <table id="examplethree" class="table table-striped" style="width:100%">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Agency</th>
+                                                                    <th>Unit</th>
+                                                                    <th>Rank</th>
+                                                                    <th>Badge #</th>
+                                                                    <th>Email</th>
+                                                                    <th class="no-sort">Actions</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Muse Agency</td>
+                                                                    <td>Main Street</td>
+                                                                    <td>21</td>
+                                                                    <td>215</td>
+                                                                    <td>museagency125@gmail.com</td>
+                                                                    <td>
+                                                                        <div class="action-btns">
+                                                                            <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                                            <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Expression Production</td>
+                                                                    <td>Main Street</td>
+                                                                    <td>21</td>
+                                                                    <td>85</td>
+                                                                    <td>info@expression.com</td>
+                                                                    <td>
+                                                                        <div class="action-btns">
+                                                                            <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                                            <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Expression Production</td>
+                                                                    <td>Main Street</td>
+                                                                    <td>12</td>
+                                                                    <td>85</td>
+                                                                    <td>info@expression.com</td>
+                                                                    <td>
+                                                                        <div class="action-btns">
+                                                                            <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                                            <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Expression Production</td>
+                                                                    <td>Main Street</td>
+                                                                    <td>12</td>
+                                                                    <td>85</td>
+                                                                    <td>info@expression.com</td>
+                                                                    <td>
+                                                                        <div class="action-btns">
+                                                                            <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                                            <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Muse Agency</td>
+                                                                    <td>Main Street</td>
+                                                                    <td>21</td>
+                                                                    <td>85</td>
+                                                                    <td>info@expression.com</td>
+                                                                    <td>
+                                                                        <div class="action-btns">
+                                                                            <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                                            <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-inner">
+                                                <div class="title-section inner-title">
+                                                    <h3>System Dissemination Log</h3>
+                                                </div>
+                                                <div class="custom-table custom-table-sm">
+                                                    <div class="table-responsive">
+                                                        <table id="examplefour" class="table table-striped" style="width:100%">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Requestor</th>
+                                                                    <th>Request#</th>
+                                                                    <th>Request Date</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Olivia Newton</td>
+                                                                    <td>215418</td>
+                                                                    <td>2021-09-25</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Isla Harry</td>
+                                                                    <td>215158</td>
+                                                                    <td>2021-09-25</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Alex John</td>
+                                                                    <td>315418</td>
+                                                                    <td>2021-09-25</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Olivia Newton</td>
+                                                                    <td>215480</td>
+                                                                    <td>2021-09-25</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Olivia Newton</td>
+                                                                    <td>215658</td>
+                                                                    <td>2021-09-25</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="Weapons" role="tabpanel" aria-labelledby="Weapons-tab">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="card-inner">
+                                                <div class="title-section inner-title">
+                                                    <h3>Attachments</h3>
+                                                    <a class="btn-primary btn-small" data-toggle="modal" data-target="#addAttachmentModal"><i class="icon-plus"></i> Add</a>
+                                                </div>
+                                                <div class="custom-table custom-table-sm">
+                                                    <div class="table-responsive">
+                                                        <table id="examplefive" class="table table-striped" style="width:100%">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Media Type</th>
+                                                                    <th>Date Captured</th>
+                                                                    <th>Description</th>
+                                                                    <th>File Link</th>
+                                                                    <th>MD5 Hash</th>
+                                                                    <th class="no-sort">Actions</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td><i class="icon-pdf file-type"></i>PDF</td>
+                                                                    <td>2021-09-15</td>
+                                                                    <td>Duis aute irure dolor</td>
+                                                                    <td><a href="" class="primary-link">Link to file</a></td>
+                                                                    <td>Apache Commons</td>
+                                                                    <td>
+                                                                        <div class="action-btns">
+                                                                            <a class=" edit-btn" href="#" data-toggle="tooltip" data-placement="bottom" title="Open"><i class="icon-eye"></i></a>
+                                                                            <a class=" delete-btn" href="#" data-toggle="tooltip" data-placement="bottom" title="Remove"><i class="icon-trash"></i></a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><i class="icon-pdf file-type"></i>PDF</td>
+                                                                    <td>2021-09-15</td>
+                                                                    <td>Duis aute irure dolor</td>
+                                                                    <td><a href="" class="primary-link">Link to file</a></td>
+                                                                    <td>Apache Commons</td>
+                                                                    <td>
+                                                                        <div class="action-btns">
+                                                                            <a class=" edit-btn" href="#" data-toggle="tooltip" data-placement="bottom" title="Open"><i class="icon-eye"></i></a>
+                                                                            <a class=" delete-btn" href="#" data-toggle="tooltip" data-placement="bottom" title="Remove"><i class="icon-trash"></i></a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><i class="icon-pdf file-type"></i>PDF</td>
+                                                                    <td>2021-09-15</td>
+                                                                    <td>Duis aute irure dolor</td>
+                                                                    <td><a href="" class="primary-link">Link to file</a></td>
+                                                                    <td>Apache Commons</td>
+                                                                    <td>
+                                                                        <div class="action-btns">
+                                                                            <a class=" edit-btn" href="#" data-toggle="tooltip" data-placement="bottom" title="Open"><i class="icon-eye"></i></a>
+                                                                            <a class=" delete-btn" href="#" data-toggle="tooltip" data-placement="bottom" title="Remove"><i class="icon-trash"></i></a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><i class="icon-pdf file-type"></i>PDF</td>
+                                                                    <td>2021-09-15</td>
+                                                                    <td>Duis aute irure dolor</td>
+                                                                    <td><a href="" class="primary-link">Link to file</a></td>
+                                                                    <td>Apache Commons</td>
+                                                                    <td>
+                                                                        <div class="action-btns">
+                                                                            <a class=" edit-btn" href="#" data-toggle="tooltip" data-placement="bottom" title="Open"><i class="icon-eye"></i></a>
+                                                                            <a class=" delete-btn" href="#" data-toggle="tooltip" data-placement="bottom" title="Remove"><i class="icon-trash"></i></a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><i class="icon-pdf file-type"></i>PDF</td>
+                                                                    <td>2021-09-15</td>
+                                                                    <td>Duis aute irure dolor</td>
+                                                                    <td><a href="" class="primary-link">Link to file</a></td>
+                                                                    <td>Apache Commons</td>
+                                                                    <td>
+                                                                        <div class="action-btns">
+                                                                            <a class=" edit-btn" href="#" data-toggle="tooltip" data-placement="bottom" title="Open"><i class="icon-eye"></i></a>
+                                                                            <a class=" delete-btn" href="#" data-toggle="tooltip" data-placement="bottom" title="Remove"><i class="icon-trash"></i></a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="Vehicles" role="tabpanel" aria-labelledby="Vehicles-tab">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="card-inner">
+                                                <div class="title-section inner-title">
+                                                    <h3>Approval</h3>
+                                                    <a class="btn-primary btn-small" data-toggle="modal" data-target="#addApprovalModal"><i class="icon-plus"></i> Add</a>
+                                                </div>
+                                                <div class="custom-table custom-table-sm">
+                                                    <div class="table-responsive">
+                                                        <table id="examplesix" class="table table-striped" style="width:100%">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Approval Type</th>
+                                                                    <th>Name</th>
+                                                                    <th>Badge #</th>
+                                                                    <th>Date</th>
+                                                                    <th class="no-sort">Actions</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>District Liason</td>
+                                                                    <td>Robert Fox</td>
+                                                                    <td>12345</td>
+                                                                    <td>2021-09-15</td>
+                                                                    <td>
+                                                                        <div class="action-btns">
+                                                                            <a href="#" class=" edit-btn"><i class="icon-pencil"></i></a>
+                                                                            <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>District Liason</td>
+                                                                    <td>Robert Fox</td>
+                                                                    <td>12345</td>
+                                                                    <td>2021-09-15</td>
+                                                                    <td>
+                                                                        <div class="action-btns">
+                                                                            <a href="#" class=" edit-btn"><i class="icon-pencil"></i></a>
+                                                                            <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>District Liason</td>
+                                                                    <td>Robert Fox</td>
+                                                                    <td>12345</td>
+                                                                    <td>2021-09-15</td>
+                                                                    <td>
+                                                                        <div class="action-btns">
+                                                                            <a href="#" class=" edit-btn"><i class="icon-pencil"></i></a>
+                                                                            <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>District Liason</td>
+                                                                    <td>Robert Fox</td>
+                                                                    <td>12345</td>
+                                                                    <td>2021-09-15</td>
+                                                                    <td>
+                                                                        <div class="action-btns">
+                                                                            <a href="#" class=" edit-btn"><i class="icon-pencil"></i></a>
+                                                                            <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>District Liason</td>
+                                                                    <td>Robert Fox</td>
+                                                                    <td>12345</td>
+                                                                    <td>2021-09-15</td>
+                                                                    <td>
+                                                                        <div class="action-btns">
+                                                                            <a href="#" class=" edit-btn"><i class="icon-pencil"></i></a>
+                                                                            <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- Main Table End -->
+        </div>
+    </div>
+</div>
+<!-- Card section end -->
+</div>
+<!-- Main section end -->
+</section>
+<script src="dist/js/all.js"></script>
+<script src="dist/js/custom_script.js"></script>
+
+</body>
+
+</html>
+<script>
+    $('#exampletwo').DataTable({
+        "paging": true,
+        "lengthChange": true,
+        "searching": false,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false,
+        "columnDefs": [{
+            "targets": 'no-sort',
+            "orderable": false,
+        }],
+        dom: "<<t><<'table-footer' <pl>i>>>",
+        "language": {
+            "paginate": {
+                "previous": "<i class='icon-angle-left page-arrow align-middle mr-2'></i>",
+                "next": "<i class='icon-angle-right page-arrow align-middle ml-2'></i> "
+            }
+        },
+    });
+    </script>

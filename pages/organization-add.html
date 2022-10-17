@@ -1,0 +1,227 @@
+@@include('../include/header.html')
+<!-- Breadcrumbs Start -->
+<div class="breadcrumbs">
+    <ul>
+        <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+        <li class="breadcrumb-item"><a href="organizations.html">Organizations </a></li>
+        <li class="breadcrumb-item active">Organization Add</li>
+    </ul>
+</div>
+<!-- Breadcrumbs End -->
+<!-- Card section start -->
+<div class="inner-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-section">
+                    <h3>Create organization</h3>
+                </div>
+            </div>
+            <!-- Main Table Start -->
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        @@include('../include/organizations/new-organization.html')
+                    </div>
+                </div>
+            </div>
+            <!-- Main Table End -->
+        </div>
+    </div>
+</div>
+<!-- Card section end -->
+</div>
+<!-- Main section end -->
+</section>
+@@include('../include/footer.html')
+<script>
+$('#exampletwo').DataTable({
+    "paging": false,
+    "lengthChange": false,
+    "searching": false,
+    "ordering": true,
+    "info": false,
+    "autoWidth": false,
+    "columnDefs": [{
+        "targets": 'no-sort',
+        "orderable": false,
+    }],
+    // dom: "<<t><<'table-footer' <pl>i>>>",
+    "language": {
+        "info": "_START_ - _END_ of _TOTAL_ items",
+        "sLengthMenu": "_MENU_ items per page",
+        "paginate": {
+            "previous": "<i class='icon-angle-left page-arrow align-middle mr-2'></i>",
+            "next": "<i class='icon-angle-right page-arrow align-middle ml-2'></i> "
+        }
+    },
+});
+$('#examplethree').DataTable({
+    "paging": false,
+    "lengthChange": false,
+    "searching": false,
+    "ordering": true,
+    "info": false,
+    "autoWidth": false,
+    "columnDefs": [{
+        "targets": 'no-sort',
+        "orderable": false,
+    }],
+    // dom: "<<t><<'table-footer' <pl>i>>>",
+    "language": {
+        "info": "_START_ - _END_ of _TOTAL_ items",
+        "sLengthMenu": "_MENU_ items per page",
+        "paginate": {
+            "previous": "<i class='icon-angle-left page-arrow align-middle mr-2'></i>",
+            "next": "<i class='icon-angle-right page-arrow align-middle ml-2'></i> "
+        }
+    },
+});
+$('#examplefour').DataTable({
+    "paging": false,
+    "lengthChange": false,
+    "searching": false,
+    "ordering": true,
+    "info": false,
+    "autoWidth": false,
+    "columnDefs": [{
+        "targets": 'no-sort',
+        "orderable": false,
+    }],
+    // dom: "<<t><<'table-footer' <pl>i>>>",
+    "language": {
+        "info": "_START_ - _END_ of _TOTAL_ items",
+        "sLengthMenu": "_MENU_ items per page",
+        "paginate": {
+            "previous": "<i class='icon-angle-left page-arrow align-middle mr-2'></i>",
+            "next": "<i class='icon-angle-right page-arrow align-middle ml-2'></i> "
+        }
+    },
+});
+$('#examplefive').DataTable({
+    "paging": true,
+    "lengthChange": true,
+    "searching": false,
+    "ordering": true,
+    "info": true,
+    "autoWidth": false,
+    "columnDefs": [{
+        "targets": 'no-sort',
+        "orderable": false,
+    }],
+    dom: "<<t><<'table-footer' <pl>i>>>",
+    "language": {
+        "info": "_START_ - _END_ of _TOTAL_ items",
+        "sLengthMenu": "_MENU_ items per page",
+        "paginate": {
+            "previous": "<i class='icon-angle-left page-arrow align-middle mr-2'></i>",
+            "next": "<i class='icon-angle-right page-arrow align-middle ml-2'></i> "
+        }
+    },
+});
+$('#examplesix').DataTable({
+    "paging": true,
+    "lengthChange": true,
+    "searching": false,
+    "ordering": true,
+    "info": true,
+    "autoWidth": false,
+    "columnDefs": [{
+        "targets": 'no-sort',
+        "orderable": false,
+    }],
+    dom: "<<t><<'table-footer' <pl>i>>>",
+    "language": {
+        "info": "_START_ - _END_ of _TOTAL_ items",
+        "sLengthMenu": "_MENU_ items per page",
+        "paginate": {
+            "previous": "<i class='icon-angle-left page-arrow align-middle mr-2'></i>",
+            "next": "<i class='icon-angle-right page-arrow align-middle ml-2'></i> "
+        }
+    },
+});
+$('#example1').DataTable({
+    "paging": true,
+    "lengthChange": true,
+    "searching": false,
+    "ordering": true,
+    "info": true,
+    "autoWidth": false,
+    "columnDefs": [{
+        "targets": 'no-sort',
+        "orderable": false,
+    }],
+    dom: "<<t><<'table-footer' <pl>i>>>",
+    "language": {
+        "info": "_START_ - _END_ of _TOTAL_ items",
+        "sLengthMenu": "_MENU_ items per page",
+        "paginate": {
+            "previous": "<i class='icon-angle-left page-arrow align-middle mr-2'></i>",
+            "next": "<i class='icon-angle-right page-arrow align-middle ml-2'></i> "
+        }
+    },
+});
+$('#example2').DataTable({
+    "paging": true,
+    "lengthChange": true,
+    "searching": false,
+    "ordering": true,
+    "info": true,
+    "autoWidth": false,
+    "columnDefs": [{
+        "targets": 'no-sort',
+        "orderable": false,
+    }],
+    dom: "<<t><<'table-footer' <pl>i>>>",
+    "language": {
+        "info": "_START_ - _END_ of _TOTAL_ items",
+        "sLengthMenu": "_MENU_ items per page",
+        "paginate": {
+            "previous": "<i class='icon-angle-left page-arrow align-middle mr-2'></i>",
+            "next": "<i class='icon-angle-right page-arrow align-middle ml-2'></i> "
+        }
+    },
+});
+$('#example3').DataTable({
+    "paging": true,
+    "lengthChange": true,
+    "searching": false,
+    "ordering": true,
+    "info": true,
+    "autoWidth": false,
+    "columnDefs": [{
+        "targets": 'no-sort',
+        "orderable": false,
+    }],
+    dom: "<<t><<'table-footer' <pl>i>>>",
+    "language": {
+        "info": "_START_ - _END_ of _TOTAL_ items",
+        "sLengthMenu": "_MENU_ items per page",
+        "paginate": {
+            "previous": "<i class='icon-angle-left page-arrow align-middle mr-2'></i>",
+            "next": "<i class='icon-angle-right page-arrow align-middle ml-2'></i> "
+        }
+    },
+});
+$('#example4').DataTable({
+    "paging": true,
+    "lengthChange": true,
+    "searching": false,
+    "ordering": true,
+    "info": true,
+    "autoWidth": false,
+    "columnDefs": [{
+        "targets": 'no-sort',
+        "orderable": false,
+    }],
+    dom: "<<t><<'table-footer' <pl>i>>>",
+    "language": {
+        "info": "_START_ - _END_ of _TOTAL_ items",
+        "sLengthMenu": "_MENU_ items per page",
+        "paginate": {
+            "previous": "<i class='icon-angle-left page-arrow align-middle mr-2'></i>",
+            "next": "<i class='icon-angle-right page-arrow align-middle ml-2'></i> "
+        }
+    },
+});
+</script>

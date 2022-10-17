@@ -1,0 +1,302 @@
+ .wizard {
+     .wizard-inner {
+         padding: 15px;
+         background: $gray-200;
+         border: 1px solid $gray-400;
+
+         .nav-tabs,
+         .wiz-tablist {
+             border: 0;
+             display: flex;
+             // justify-content: space-between;
+             max-width: 100%;
+             position: relative;
+             list-style-type: none;
+             margin: 0 auto;
+
+             li {
+                 max-width: 50%;
+                 text-align: left;
+                 flex: 1;
+                 position: relative;
+
+                 .current-info {
+                     display: none;
+                 }
+
+                 a {
+                     // display: flex;
+                     // flex-direction: column;
+                     align-items: center;
+                     color: #ACA9B9;
+                     background: transparent;
+                     padding: 0;
+
+                     i {
+                         font-style: normal;
+                         text-transform: uppercase;
+                         font-size: 14px;
+                         font-weight: 500;
+                         color: $color-black;
+                         opacity: 0.5;
+                         position: relative;
+                         z-index: 4;
+                         display: none;
+
+                         @include media-breakpoint-up(sm) {
+                             display: inline-block;
+                         }
+                     }
+
+                     &:after {
+                         position: absolute;
+                         content: "";
+                         height: 2px;
+                         top: 13px;
+                         margin-top: -1px;
+                         left: 0;
+                         right: 0;
+                         background: $primary;
+                         opacity: 0;
+                         z-index: 2;
+
+                         @include media-breakpoint-up(lg) {
+                             top: 15px;
+                         }
+                     }
+
+                     .tab-information {
+                         display: inline-block;
+                         position: relative;
+                         padding-right: 15px;
+
+                         &:before,
+                         &:after {
+                             position: absolute;
+                             content: "";
+                             height: 2px;
+                             top: 13px;
+                             margin-top: -1px;
+                             left: 0;
+                             right: 0;
+                             background: $gray-200;
+                             z-index: 3;
+                             display: none;
+
+                             @include media-breakpoint-up(sm) {
+                                 display: inline-block;
+                             }
+                             @include media-breakpoint-up(lg) {
+                                 top: 15px;
+                             }
+                         }
+                     }
+
+                     span.round-tab,
+                     .number {
+                         width: 25px;
+                         height: 25px;
+                         line-height: 20px;
+                         border: 2px solid $gray-400;
+                         // display: block;
+                         border-radius: 50%;
+                         background: $color-white;
+                         position: relative;
+                         // margin: 0 auto 5px;
+                         margin-right: 10px;
+                         z-index: 4;
+                         display: inline-block;
+                         text-align: center;
+
+                         @include media-breakpoint-up(lg) {
+                             width: 30px;
+                             height: 30px;
+                             line-height: 25px;
+                         }
+
+                         &:before {
+                             left: 7px;
+                             top: 2px;
+                             width: 7px;
+                             height: 13px;
+                             border: solid #fff;
+                             border-width: 0 2px 2px 0;
+                             transform: rotate(45deg);
+                             content: "";
+                             position: absolute;
+                             opacity: 0;
+
+                             @include media-breakpoint-up(lg) {
+                                 top: 5px;
+                                 left: 9px;
+                             }
+                         }
+                     }
+                 }
+
+                 &.active,
+                 &.current {
+                     a {
+                         color: $color-white;
+
+                         span.round-tab,
+                         .number {
+                             background: $primary;
+                             border-color: $primary;
+                         }
+
+                         i {
+                             opacity: 1;
+                             display: none;
+
+                             @include media-breakpoint-up(sm) {
+                                 display: inline-block;
+                             }
+                         }
+                     }
+                 }
+
+                 &.error {
+                     a {
+
+                         span.round-tab,
+                         .number {
+                             background: $red;
+                         }
+                     }
+                 }
+
+                 &.completed,
+                 &.done {
+                     a {
+                         color: #5B5865;
+
+                         span.round-tab,
+                         .number {
+                             background: $primary;
+                             border-color: $primary;
+
+                             &:before {
+                                 opacity: 1;
+                             }
+
+                             text-indent: -9999px;
+                         }
+
+                         i {
+                             opacity: 1;
+                         }
+
+                         &:after {
+                             opacity: 1;
+                         }
+
+                     }
+
+                     /* &:before {
+                            background: $cyan;
+                            z-index: 2;
+                        } */
+                 }
+
+                 &:before {
+                     position: absolute;
+                     content: "";
+                     height: 2px;
+                     top: 13px;
+                     margin-top: -1px;
+                     width: 100%;
+                     border: 1px dashed $gray-300;
+                     right: 0;
+
+                     @include media-breakpoint-up(lg) {
+                         top: 15px;
+                     }
+                 }
+
+                 &:last-child {
+                     &:before {
+                         display: none;
+                     }
+                 }
+
+                 &.disabled {
+                     pointer-events: none;
+                 }
+             }
+         }
+     }
+
+     >.content {
+         background-color: transparent;
+         margin: 0;
+         margin-top: 20px;
+         border-top: 1px solid $gray-200;
+         border-radius: 0;
+
+         &>.body {
+             float: none;
+             padding: 0;
+             position: static;
+             width: 100%;
+             height: 100%;
+
+             input {
+                 display: block;
+                 border: 1px solid $gray-300;
+
+                 &:focus {
+                     border-color: $primary;
+                 }
+             }
+         }
+     }
+
+     >.actions {
+         @extend .card-footer;
+
+         ul {
+             display: flex;
+
+             li {
+                 &:first-child {
+                     margin-right: auto;
+                 }
+
+                 a {
+                     background-color: $primary;
+                     border-radius: 25px;
+                     padding: 8px 20px;
+                 }
+
+                 &.disabled {
+                     a {
+                         background-color: $gray-200;
+                     }
+                 }
+             }
+         }
+
+     }
+
+     .form-tab-content {
+         background-color: $white;
+         border: 1px solid $gray-400;
+     }
+    &.no-heading{
+        .wizard-inner{
+            height: 0;
+            visibility: hidden;
+            padding: 0;
+        }
+    }
+ }
+
+ .flex-initial {
+     flex: initial !important;
+ }
+
+ .prev-step.btn-primary.disabled,  .prev-step.btn-primary:disabled{
+    opacity: 0;
+    visibility: hidden;
+ }

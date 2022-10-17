@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HRPS">
+  <meta name="keywords" content="HRPS">
+  <meta name="author" content="HRPS">
+  <link rel="icon" href="img/fav_icon.ico" type="image/x-icon" />
+  <title>HRPS</title>
+
+  <!--Google font-->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+  <!-- Jquery Datatables -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.11.3/datatables.min.css"/>
+
+
+  <!-- Theme css -->
+  <!-- <link rel="stylesheet" type="text/css" href="dist/css/jquery.bs4-scrolling-tabs.min.css"> -->
+  <link rel="stylesheet" type="text/css" href="plugins/datepicker/datepicker3.css">
+  <link rel="stylesheet" type="text/css" href="dist/css/style.css">
+</head>
+
+<body>
+
+    <section class="main_section">
+        
+        <!-- Side menu end -->
+        <div class="side-menu" id="sidemenu">
+
+            <div class="logo-img">
+                <a class="" href="#"><img class="img-fluid" src="dist/img/logo.png" /></a>
+                <a href="#" class="menu-close d-md-none"><i class="icon-times"></i></a>
+            </div>
+            <div class="menu-sec">
+                <ul>
+                    <li class="active">
+                        <a href="dashboard.html"><span class="icon icon-dashboard"></span> Dashboard</a>
+                    </li>
+                    <li class="">
+                        <a href="advanced-search.html"><span class="icon icon-search"></span> Advanced Search</a>
+                    </li>
+                    <li class="">
+                        <a href="files.html"><span class="icon icon-files"></span> Files</a>
+                    </li>
+                    <li class="">
+                        <a href="intelligence-reports.html"><span class="icon icon-incident-reports"></span>Intelligence Reports</a>
+                    </li>
+                    <li class="">
+                        <a href="people.html"><span class="icon icon-people"></span> People</a>
+                    </li>
+                    <li class="">
+                        <a href="organizations.html"><span class="icon icon-organizations"></span> Organizations</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Side menu start -->
+
+        <!-- Main section start -->
+        <div class="main_components" id="maincomponents">
+
+            <!-- Header Start -->
+            <header>
+                <nav class="navbar">
+                    <div class="container-fluid p-0">
+                      
+                        <div class="me-auto">
+                            <button class="btn menu-btns" id="menubtns"><i class="icon-menu"></i></button>
+                        </div>
+                        
+                        <!-- <div class="dropdown user-dropdown">
+                            <button class="btn dropdown-toggle header-info" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                              <img class="img-fluid" src="https://images.pexels.com/photos/5324923/pexels-photo-5324923.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" /> <span>Devid1988</span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </div> -->
+                        <div class="user-info"><i class="icon-user-circle mr-2"></i>Devid1988</div>
+                    </div>
+                  </nav>
+
+            </header>
+            <!-- Header End -->
+<!-- Breadcrumbs Start -->
+<div class="breadcrumbs">
+    <ul>
+        <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+        <li class="breadcrumb-item"><a href="intelligence-reports.html">Intelligence Reports</a></li>
+        <li class="breadcrumb-item">Review</li>
+    </ul>
+</div>
+<!-- Breadcrumbs End -->
+<!-- Card section start -->
+<div class="inner-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-section">
+                    <div>
+                        <h3>Intelligence Report 001</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- Main Table Start -->
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="bordered-card">
+                            <div class="title-section inner-title">
+                                <div>
+                                    <h3>Request Details</h3>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-4">
+                                    <div class="form-group mb-0">
+                                        <label class="form-label">Request Type</label>
+                                        <select class="form-control select2" data-placeholder="Select">
+                                          <option value=""></option>
+                                          <option selected>Type 1</option>
+                                          <option>Type 2</option>
+                                          <option>Type 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 align-self-end">
+                                    <p><span class="text-secondary"><i class="icon-user-alt mr-2"></i>Request By:</span> John Doe</p>
+                                </div>
+                                <div class="col-md-4 align-self-end">
+                                    <p><span class="text-secondary"><i class="icon-calendar mr-2"></i>Request Date:</span> 2022-01-15</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">What information</label>
+                                <textarea class="form-control">If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat.</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Reason</label>
+                                <textarea class="form-control">If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything  embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to.</textarea>
+                            </div>
+                        </div>
+                        <div class="bordered-card">
+                            <div class="title-section inner-title">
+                                <div>
+                                    <h3>Report Details</h3>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-4">
+                                    <p><span class="text-secondary"><i class="icon-download mr-2"></i>Download:</span> <a href="#" class="primary-link no-underline">Download Report</a></p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p><span class="text-secondary"><i class="icon-user-alt mr-2"></i>Request By:</span> John Doe</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p><span class="text-secondary"><i class="icon-calendar mr-2"></i>Request Date:</span> 2022-01-15</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Analyst Comments</label>
+                                <textarea class="form-control">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea>
+                            </div>
+                        </div>
+                        <div class="btn-wrap tab-btn-wrap">
+                            <a href="#" class="btn btn-light btn-small"><i class="icon-times"></i> Reject</a>
+                            <div>
+                                <button class="btn btn-primary btn-small"><i class="icon-check"></i> Approve with Redaction</button>
+                                <button class="btn btn-primary btn-small" data-toggle="modal" data-target="#approveReportModal"><i class="icon-check"></i> Approve</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Main Table End -->
+        </div>
+    </div>
+</div>
+<!-- Card section end -->
+</div>
+<!-- Main section end -->
+</section>
+<script src="dist/js/all.js"></script>
+<script src="dist/js/custom_script.js"></script>
+
+</body>
+
+</html>
+<!-- Modal -->
+<div class="modal fade" id="approveReportModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Approve Report</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Add any comments</p>
+                <div class="form-group">
+                    <label class="form-label">Comments</label>
+                    <textarea class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-small btn-light" data-dismiss="modal"><i class="icon-times"></i> Cancel</button>
+                <button type="button" class="btn btn-small btn-primary"><i class="icon-paper-plane"></i> Send</button>
+            </div>
+        </div>
+    </div>
+</div>

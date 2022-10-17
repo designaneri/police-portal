@@ -1,0 +1,52 @@
+@@include('../include/header.html')
+
+            <!-- Breadcrumbs Start -->
+            <div class="breadcrumbs">
+                <ul>
+                    <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                    <li class="breadcrumb-item active">People</li>
+                </ul>
+            </div>
+            <!-- Breadcrumbs End -->
+
+            <!-- Card section start -->
+            <div class="inner-wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="title-section">
+                                <h3>People</h3>
+                                <button class="btn-primary" onclick="window.location.replace('add-person.html')"><i class="icon-plus"></i> Add Person</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Search Panel Start -->
+                        <div class="col-md-12">
+                            @@include('../include/people/people-search.html')
+                        </div>
+                        <!-- Search Panel End -->
+                        
+                        <!-- Main Table Start -->
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="custom-table ">
+                                        <div class="table-responsive">
+                                            @@include('../include/people/people-listing.html')
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Main Table End -->
+                    </div>
+                </div>
+            </div>
+            <!-- Card section end -->
+
+        </div>
+        <!-- Main section end -->
+
+    </section>
+    @@include('../include/footer.html')
+    @@include('../include/advanced-search.html')

@@ -1,0 +1,78 @@
+
+
+// ==============================
+//  Header Start
+// ==============================
+header{
+    background-color: $color-white;
+    position: relative;
+    border-bottom: 1px solid $gray-300;
+    width: 100%;
+    .navbar{
+        padding: 10px;
+        .user-info{
+            font-size: 15px;
+            color: $color-black;
+            display: flex;
+            align-items: center;
+            i{
+                color: $gray-600;
+            }
+        }
+        .user-dropdown{
+            a.nav-link{
+                    font-size: 16px;
+                    color: $color-black;
+                    i{
+                        color: $gray-600;
+                    }
+               }
+               .dropdown-toggle:after{
+                    border-left: 4px solid transparent;
+                    border-right: 4px solid transparent;
+                    border-top: 4px solid;
+                    top: 1px;
+                    position: relative;
+                    margin-left: 8px;
+               }
+           .header-info{
+                    padding: 5px 5px 5px 5px;
+                    width: 170px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    position: relative;
+               img{
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    margin: 0 15px 0 0;
+               }
+               span{
+                    font-size: 16px;
+                    color: $color-black;
+               }
+           } 
+        }
+    }
+    .menu-btns{
+        padding: 0px 10px 0px 10px;
+        font-size: 26px;
+        color: $gray-600;
+        background: transparent;
+		padding: 10px 11px;
+        line-height: 1;
+        vertical-align: top;
+        font-size: initial;
+        i{
+            font-size: 16px;
+			line-height: 1;
+            margin: 0;
+        }
+
+    }
+}
+// ==============================
+//  Header End
+// ==============================

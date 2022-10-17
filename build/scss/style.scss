@@ -1,0 +1,34 @@
+// fontawesome
+// ---------------------------------------------------
+@import "fontawesome-pro/fontawesome.scss";
+// @import "fontawesome-pro/solid.scss";
+// @import "fontawesome-pro/light.scss";
+@import "fontawesome-pro/regular.scss";
+// @import "fontawesome-pro/brands.scss";
+
+//Bootstrap ---------------------------------------------------
+@import "../../plugins/bootstrap/scss/functions";
+@import "_bootstrap-variable";
+@import "../../plugins/bootstrap/scss/bootstrap";
+@import "../../plugins/select2/scss/core.scss";
+
+// custom icons
+@import "font-icons";
+ 
+@import "variable";
+@import "mixins";
+@import "header";
+@import "sidemenu";
+@import "button";
+@import "select2";
+@import "form-elements";
+@import "table";
+@import "tabs";
+@import "step-wizard";
+@import "modal";
+@import "dropzone";
+@import "dev-styles";
+@import "main";
+@import "footer";
+
+

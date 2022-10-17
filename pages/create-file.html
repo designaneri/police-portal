@@ -1,0 +1,330 @@
+@@include('../include/header.html')
+<!-- Breadcrumbs Start -->
+<div class="breadcrumbs">
+    <ul>
+        <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+        <li class="breadcrumb-item"><a href="files.html">Files</a></li>
+        <li class="breadcrumb-item active">Create File</li>
+    </ul>
+</div>
+<!-- Breadcrumbs End -->
+<!-- Card section start -->
+<div class="inner-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-section">
+                    <h3>Create File</h3>
+                </div>
+            </div>
+            <!-- Main Table Start -->
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form-information mb-4">
+                            <div class="editable-label">
+                                <i class="icon-report mr-1 fa-icon"></i>
+                                <span class="extra-label">File Number</span>
+                                <label for="name" class="control-label">
+                                    <p class="text-info">2022-2121</p>
+                                </label>
+                                <div class="controls">
+                                    <a href="#" class="edit-text-icon"><i class="icon-pencil"></i></a>
+                                    <a href="#" class="save-text-icon"><i class="icon-check"></i></a>
+                                </div>
+                            </div>
+                            <div class="editable-label has-datepicker">
+                                <i class="icon-calendar mr-1 fa-icon"></i>
+                                <span class="extra-label">Created Date</span>
+                                <div class="datepicker-wrap mb-0">
+                                    <input type="text" class="form-control editable-date" id="" value="12/03/2021">
+                                </div>
+                                <label for="date" class="control-label">
+                                    <p class="text-info">12/03/2021</p>
+                                </label>
+                                <div class="controls">
+                                    <a href="#" class="edit-text-icon"><i class="icon-pencil"></i></a>
+                                    <a href="#" class="save-text-icon"><i class="icon-check"></i></a>
+                                </div>
+                            </div>
+                            <div class="editable-label">
+                                <i class="icon-user-alt mr-1 fa-icon"></i>
+                                <span class="extra-label">Created By</span>
+                                <label for="name" class="control-label">
+                                    <p class="text-info">John Doe</p>
+                                </label>
+                                <div class="controls">
+                                    <a href="#" class="edit-text-icon"><i class="icon-pencil"></i></a>
+                                    <a href="#" class="save-text-icon"><i class="icon-check"></i></a>
+                                </div>
+                            </div>
+                            <div class="editable-label has-datepicker">
+                                <i class="icon-calendar mr-1 fa-icon"></i>
+                                <span class="extra-label">Updated Date</span>
+                                <div class="datepicker-wrap mb-0">
+                                    <input type="text" class="form-control editable-date" id="" value="12/03/2021">
+                                </div>
+                                <label for="date" class="control-label">
+                                    <p class="text-info">12/03/2021</p>
+                                </label>
+                                <div class="controls">
+                                    <a href="#" class="edit-text-icon"><i class="icon-pencil"></i></a>
+                                    <a href="#" class="save-text-icon"><i class="icon-check"></i></a>
+                                </div>
+                            </div>
+                            <div class="editable-label">
+                                <i class="icon-user-alt mr-1 fa-icon"></i>
+                                <span class="extra-label">Updated By</span>
+                                <label for="name" class="control-label">
+                                    <p class="text-info">John Doe25</p>
+                                </label>
+                                <div class="controls">
+                                    <a href="#" class="edit-text-icon"><i class="icon-pencil"></i></a>
+                                    <a href="#" class="save-text-icon"><i class="icon-check"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wizard flex-grow-1 no-heading">
+                            <div class="wizard-inner flex-grow-1">
+                                <ul class="nav nav-tabs mw-100" role="tablist">
+                                    <li role="presentation" class="active">
+                                        <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" aria-expanded="true"><span class="tab-information"><span class="round-tab">1</span> <i>Create File &amp; Add Report</i></span></a>
+                                    </li>
+                                    <li role="presentation" class="disabled">
+                                        <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" aria-expanded="false"><span class="tab-information"><span class="round-tab">2</span> <i>Add Entities</i></span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="wizard">
+                            <form role="form">
+                                <div class="tab-content form-tab-content">
+                                    <div class="tab-pane fade show active" role="tabpanel" id="step1">
+                                        <div class="card-body">
+                                            @@include('../include/create-file.html')
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" role="tabpanel" id="step2">
+                                        <div class="card-body">
+                                            @@include('../include/add-entities.html')
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btn-wrap tab-btn-wrap">
+                                    <button class="btn btn-primary btn-small prev-step prev-step-sm" disabled><i class="icon-arrow-left"></i> <span>Prev</span></button>
+                                    <div>
+                                        <a href="#" class="btn btn-light btn-small"><i class="icon-times"></i> Cancel</a>
+                                        <button class="btn btn-primary btn-small next-step right-arrow-btn"><i class="icon-arrow-right"></i> <span class="nextstep-text">Next</span></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Main Table End -->
+        </div>
+    </div>
+</div>
+<!-- Card section end -->
+</div>
+<!-- Main section end -->
+</section>
+@@include('../include/attachment-modal.html')
+@@include('../include/dissemination-modal.html')
+@@include('../include/narrative-modal.html')
+@@include('../include/approval-modal.html')
+@@include('../include/approval-modal.html')
+@@include('../include/footer.html')
+@@include('../include/advanced-search.html')
+<script>
+$('#exampletwo').DataTable({
+    "paging": false,
+    "lengthChange": false,
+    "searching": false,
+    "ordering": true,
+    "info": false,
+    "autoWidth": false,
+    "columnDefs": [{
+        "targets": 'no-sort',
+        "orderable": false,
+    }],
+    // dom: "<<t><<'table-footer' <pl>i>>>",
+    "language": {
+        "info": "_START_ - _END_ of _TOTAL_ items",
+        "sLengthMenu": "_MENU_ items per page",
+        "paginate": {
+            "previous": "<i class='icon-angle-left page-arrow align-middle mr-2'></i>",
+            "next": "<i class='icon-angle-right page-arrow align-middle ml-2'></i> "
+        }
+    },
+});
+$('#examplethree').DataTable({
+    "paging": false,
+    "lengthChange": false,
+    "searching": false,
+    "ordering": true,
+    "info": false,
+    "autoWidth": false,
+    "columnDefs": [{
+        "targets": 'no-sort',
+        "orderable": false,
+    }],
+    // dom: "<<t><<'table-footer' <pl>i>>>",
+    "language": {
+        "info": "_START_ - _END_ of _TOTAL_ items",
+        "sLengthMenu": "_MENU_ items per page",
+        "paginate": {
+            "previous": "<i class='icon-angle-left page-arrow align-middle mr-2'></i>",
+            "next": "<i class='icon-angle-right page-arrow align-middle ml-2'></i> "
+        }
+    },
+});
+$('#examplefour').DataTable({
+    "paging": false,
+    "lengthChange": false,
+    "searching": false,
+    "ordering": true,
+    "info": false,
+    "autoWidth": false,
+    "columnDefs": [{
+        "targets": 'no-sort',
+        "orderable": false,
+    }],
+    // dom: "<<t><<'table-footer' <pl>i>>>",
+    "language": {
+        "info": "_START_ - _END_ of _TOTAL_ items",
+        "sLengthMenu": "_MENU_ items per page",
+        "paginate": {
+            "previous": "<i class='icon-angle-left page-arrow align-middle mr-2'></i>",
+            "next": "<i class='icon-angle-right page-arrow align-middle ml-2'></i> "
+        }
+    },
+});
+$('#examplefive').DataTable({
+    "paging": true,
+    "lengthChange": true,
+    "searching": false,
+    "ordering": true,
+    "info": true,
+    "autoWidth": false,
+    "columnDefs": [{
+        "targets": 'no-sort',
+        "orderable": false,
+    }],
+    dom: "<<t><<'table-footer' <pl>i>>>",
+    "language": {
+        "info": "_START_ - _END_ of _TOTAL_ items",
+        "sLengthMenu": "_MENU_ items per page",
+        "paginate": {
+            "previous": "<i class='icon-angle-left page-arrow align-middle mr-2'></i>",
+            "next": "<i class='icon-angle-right page-arrow align-middle ml-2'></i> "
+        }
+    },
+});
+$('#examplesix').DataTable({
+    "paging": true,
+    "lengthChange": true,
+    "searching": false,
+    "ordering": true,
+    "info": true,
+    "autoWidth": false,
+    "columnDefs": [{
+        "targets": 'no-sort',
+        "orderable": false,
+    }],
+    dom: "<<t><<'table-footer' <pl>i>>>",
+    "language": {
+        "info": "_START_ - _END_ of _TOTAL_ items",
+        "sLengthMenu": "_MENU_ items per page",
+        "paginate": {
+            "previous": "<i class='icon-angle-left page-arrow align-middle mr-2'></i>",
+            "next": "<i class='icon-angle-right page-arrow align-middle ml-2'></i> "
+        }
+    },
+});
+$('#example1').DataTable({
+    "paging": true,
+    "lengthChange": true,
+    "searching": false,
+    "ordering": true,
+    "info": true,
+    "autoWidth": false,
+    "columnDefs": [{
+        "targets": 'no-sort',
+        "orderable": false,
+    }],
+    dom: "<<t><<'table-footer' <pl>i>>>",
+    "language": {
+        "info": "_START_ - _END_ of _TOTAL_ items",
+        "sLengthMenu": "_MENU_ items per page",
+        "paginate": {
+            "previous": "<i class='icon-angle-left page-arrow align-middle mr-2'></i>",
+            "next": "<i class='icon-angle-right page-arrow align-middle ml-2'></i> "
+        }
+    },
+});
+$('#example2').DataTable({
+    "paging": true,
+    "lengthChange": true,
+    "searching": false,
+    "ordering": true,
+    "info": true,
+    "autoWidth": false,
+    "columnDefs": [{
+        "targets": 'no-sort',
+        "orderable": false,
+    }],
+    dom: "<<t><<'table-footer' <pl>i>>>",
+    "language": {
+        "info": "_START_ - _END_ of _TOTAL_ items",
+        "sLengthMenu": "_MENU_ items per page",
+        "paginate": {
+            "previous": "<i class='icon-angle-left page-arrow align-middle mr-2'></i>",
+            "next": "<i class='icon-angle-right page-arrow align-middle ml-2'></i> "
+        }
+    },
+});
+$('#example3').DataTable({
+    "paging": true,
+    "lengthChange": true,
+    "searching": false,
+    "ordering": true,
+    "info": true,
+    "autoWidth": false,
+    "columnDefs": [{
+        "targets": 'no-sort',
+        "orderable": false,
+    }],
+    dom: "<<t><<'table-footer' <pl>i>>>",
+    "language": {
+        "info": "_START_ - _END_ of _TOTAL_ items",
+        "sLengthMenu": "_MENU_ items per page",
+        "paginate": {
+            "previous": "<i class='icon-angle-left page-arrow align-middle mr-2'></i>",
+            "next": "<i class='icon-angle-right page-arrow align-middle ml-2'></i> "
+        }
+    },
+});
+$('#example4').DataTable({
+    "paging": true,
+    "lengthChange": true,
+    "searching": false,
+    "ordering": true,
+    "info": true,
+    "autoWidth": false,
+    "columnDefs": [{
+        "targets": 'no-sort',
+        "orderable": false,
+    }],
+    dom: "<<t><<'table-footer' <pl>i>>>",
+    "language": {
+        "info": "_START_ - _END_ of _TOTAL_ items",
+        "sLengthMenu": "_MENU_ items per page",
+        "paginate": {
+            "previous": "<i class='icon-angle-left page-arrow align-middle mr-2'></i>",
+            "next": "<i class='icon-angle-right page-arrow align-middle ml-2'></i> "
+        }
+    },
+});
+</script>

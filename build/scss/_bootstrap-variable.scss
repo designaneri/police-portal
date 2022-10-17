@@ -1,0 +1,29 @@
+
+// xxl and xxxl breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px,
+  xxxl: 1600px
+) !default;
+
+$grid-gutter-width: 20px !default;
+
+
+$gray-100: #f1f1f1 !default;
+$gray-200: #f7f7f7 !default;
+$gray-300: #dddddd !default;
+$gray-400: #e8e8e8 !default;
+$gray-500: #4a4a4a !default;
+$gray-600: #989898 !default;
+$gray-700: #808080 !default;
+$gray-800: #777777 !default;
+$gray-900: #333333 !default;
+
+$primary: #1662DD;
+$theme-colors: (
+  "primary": $primary,
+);

@@ -1,0 +1,111 @@
+// ==============================
+//  Login Page Start
+// ==============================
+
+.login-section{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $gray-100;
+    overflow: hidden;
+    padding: 40px 0 100px;
+    flex-direction: column;
+    // bottom image
+    &::before{
+        content: " ";
+        position: absolute;
+        background-image: url(../img/HRPS-logo.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        left: 50%;
+        opacity: 0.2;
+        bottom: -26%;
+        z-index: 0;
+        transform: translate(-50%, 0%);
+    }
+    .logo-img{
+        text-align: center;
+        position: relative;
+        margin: 0 0 20px 0;
+        max-width: 90px;
+        @include media-breakpoint-up(lg){
+           margin: 0 0 40px 0;
+           max-width: 120px;
+        }
+    }
+    .login-form{
+        width: 80%;
+        background-color: $color-white;
+        padding: 15px;
+        border: 1px solid $gray-400;
+        position: relative;
+        z-index: 2;
+        @include media-breakpoint-up(md){
+            padding: 25px;
+            width: 400px;
+        }
+        @include media-breakpoint-up(lg){
+            padding: 30px;
+            width: 450px;
+        }
+         @include media-breakpoint-up(xxl){
+            padding: 50px;
+        }
+        .btn-primary{
+            width: 100%;
+            margin: 10px 0 0 0;
+        }
+        h3{
+            font-size: 24px;
+            font-weight: 500;
+            color: $color-black;
+            margin: 0 0 30px 0;
+        }
+        .form-label{
+            color: $color-black;
+            font-size: 14px;
+            @include media-breakpoint-up(xxl){
+               font-size: 16px;
+            }
+        }
+        .icon-wrap {
+            .rollover {
+                display: none;
+            }
+
+            &.is-visible {
+                .rollover {
+                    display: block;
+                }
+
+                .normal {
+                    display: none;
+                }
+            }
+        }
+        
+    }
+}
+
+// ==============================
+//  Login Page End
+// ==============================
+
+.forgot-link{
+    padding: 0 0;
+    display: inline-block;
+    text-transform: capitalize;
+    color: $color-black;
+    font-size: 16px;
+    transition: 0.2s all ease;
+    text-decoration: underline;
+    &:hover{
+        color: $primary;
+        transition: 0.2s all ease;
+    }
+}

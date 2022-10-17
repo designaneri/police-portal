@@ -1,0 +1,156 @@
+.side-menu{
+    width: 240px;
+    max-height: 100%;
+    min-height: 100vh;
+    background-color: $color-white;
+    position: fixed;
+    left: -240px;
+    top: 0px;
+    z-index: 99;
+    transition: 0.3s all ease;
+    overflow-y: auto;
+    @include media-breakpoint-up(md){
+       left: 0;
+    }
+    @include media-breakpoint-up(xl){
+       width: 260px;
+    }
+     @include media-breakpoint-up(xxl){
+       width: 280px;
+    }
+     @include media-breakpoint-up(xxxl){
+       width: 300px;
+    }
+    &.sidebar-toggle{
+        left: 0;
+        transition: 0.3s all ease;
+        box-shadow: 0 1px 10px rgba(0,0,0,0.3);
+        @include media-breakpoint-up(md){
+           left: -240px;
+           box-shadow: none;
+        }
+        @include media-breakpoint-up(xl){
+           left: -260px;
+        }
+         @include media-breakpoint-up(xxl){
+           left: -280px;
+        }
+         @include media-breakpoint-up(xxxl){
+           left: -300px;
+        }
+    }
+    .menu-close{
+        color: $gray-600;
+        font-size: 20px;
+    }
+    .logo-img{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 15px;
+        padding: 20px;
+        position: relative;
+        align-items: flex-end;
+        img{
+            width: 140px;
+            @include media-breakpoint-up(md){
+               width: 160px;
+            }
+             @include media-breakpoint-up(xl){
+               width: 200px;
+            }
+        }
+    }
+    .menu-sec{
+        position: relative;
+        ul{
+            position: relative;
+            &::after{
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 1px;
+                opacity: 0.6;
+                background: linear-gradient(90deg, rgba(196,196,196,1) -30%, rgba(255,255,255,1) 100%);
+            }
+            li{
+                display: block;
+                position: relative;
+                overflow: hidden;
+                transition: 0.3s all ease;
+                a{
+                    display: flex;
+                    width: 100%;
+                    position: relative;
+                    text-decoration: none;
+                    padding: 17px 20px 17px 20px;
+                    color: $color-black;
+                    font-weight: 500;
+                    line-height: 20px;
+                    font-size: 16px;
+                    align-items: center;
+                    overflow: hidden;
+                    justify-content: flex-start;
+                    z-index: 5;
+                    .icon{
+                        margin: 0 10px 0 0;
+                        color: $primary;
+                    }
+                } 
+                &::before{
+                    content: "\e91e";
+                    position: absolute;
+                    font-family: 'hrps' !important;
+                    font-weight: 600;
+                    right: -20px;
+                    z-index: 1;
+                    top: 50%;
+                    transition: 0.3s all ease;
+                    transform: translate(-50%, -50%);
+                    font-size: 13px;
+                    z-index: 15;
+                }
+                &::after{
+                    content: " ";
+                    position: absolute;
+                    width: 45px;
+                    height: 45px;
+                    background-color: #f1f1f1;
+                    right: -80px;
+                    border-radius: 15px;
+                    transition: 0.3s all ease;
+                    transform: translate(-50% , -50%) rotate(50deg) skew(5deg, -5deg);
+                    top: 50%;
+                    z-index: 10;
+                }
+                &:hover{
+                    background-color: $primary;
+                    a{
+                        color: $color-white;
+                        &::after{
+                            width: 100%;
+                            transition: 0.3s all ease;
+                        }
+                        .icon{
+                            color: $color-white;
+                        }
+                    }
+                }
+                &.active{
+                    background-color: $primary;
+                    a{
+                        color: $color-white;
+                        &::after{
+                            width: 100%;
+                            transition: 0.3s all ease;
+                        }
+                        .icon{
+                            color: $color-white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

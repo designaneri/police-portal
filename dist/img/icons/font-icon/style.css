@@ -1,0 +1,207 @@
+@font-face {
+  font-family: 'hrps';
+  src:  url('fonts/hrps.eot?pfi1um');
+  src:  url('fonts/hrps.eot?pfi1um#iefix') format('embedded-opentype'),
+    url('fonts/hrps.ttf?pfi1um') format('truetype'),
+    url('fonts/hrps.woff?pfi1um') format('woff'),
+    url('fonts/hrps.svg?pfi1um#hrps') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'hrps' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-check:before {
+  content: "\e926";
+}
+.icon-vehicle-alt:before {
+  content: "\e924";
+}
+.icon-arrow-left:before {
+  content: "\e936";
+}
+.icon-arrow-right:before {
+  content: "\e91b";
+}
+.icon-download:before {
+  content: "\e916";
+}
+.icon-eye:before {
+  content: "\e917";
+}
+.icon-report:before {
+  content: "\e918";
+}
+.icon-paper-plane:before {
+  content: "\e91a";
+}
+.icon-arrow:before {
+  content: "\e900";
+}
+.icon-dashboard:before {
+  content: "\e901";
+}
+.icon-file:before {
+  content: "\e902";
+  color: #5041ab;
+}
+.icon-files:before {
+  content: "\e903";
+}
+.icon-frame:before {
+  content: "\e904";
+}
+.icon-frame1:before {
+  content: "\e90d";
+}
+.icon-frame2:before {
+  content: "\e919";
+}
+.icon-frame3:before {
+  content: "\e925";
+}
+.icon-incident-reports:before {
+  content: "\e92e";
+}
+.icon-organizations:before {
+  content: "\e92f";
+}
+.icon-people:before {
+  content: "\e930";
+}
+.icon-picture:before {
+  content: "\e931";
+  color: #f5b544;
+}
+.icon-requests:before {
+  content: "\e932";
+}
+.icon-search:before {
+  content: "\e933";
+}
+.icon-vehicles:before {
+  content: "\e934";
+}
+.icon-weapons:before {
+  content: "\e935";
+}
+.icon-commodities:before {
+  content: "\e905";
+}
+.icon-events:before {
+  content: "\e909";
+}
+.icon-human-trafficking:before {
+  content: "\e90a";
+}
+.icon-enforcement:before {
+  content: "\e915";
+}
+.icon-organization:before {
+  content: "\e90b";
+}
+.icon-source:before {
+  content: "\e90c";
+}
+.icon-weapon:before {
+  content: "\e90e";
+}
+.icon-business:before {
+  content: "\e90f";
+}
+.icon-location:before {
+  content: "\e908";
+}
+.icon-pencil:before {
+  content: "\e906";
+}
+.icon-plus:before {
+  content: "\e907";
+}
+.icon-times:before {
+  content: "\e910";
+}
+.icon-trash:before {
+  content: "\e911";
+}
+.icon-users:before {
+  content: "\e912";
+}
+.icon-vehicle:before {
+  content: "\e913";
+}
+.icon-calendar:before {
+  content: "\e914";
+}
+.icon-menu:before {
+  content: "\e91c";
+}
+.icon-angle-left:before {
+  content: "\e91d";
+}
+.icon-angle-right:before {
+  content: "\e91e";
+}
+.icon-user-alt:before {
+  content: "\e91f";
+}
+.icon-mail:before {
+  content: "\e920";
+}
+.icon-user:before {
+  content: "\e921";
+}
+.icon-user-circle:before {
+  content: "\e922";
+}
+.icon-file-search:before {
+  content: "\e923";
+}
+.icon-file-edit:before {
+  content: "\e927";
+}
+.icon-png:before {
+  content: "\e928";
+  color: #b124f3;
+}
+.icon-jpg:before {
+  content: "\e929";
+  color: #ff9b28;
+}
+.icon-doc:before {
+  content: "\e92a";
+  color: #305ed8;
+}
+.icon-pdf:before {
+  content: "\e92b";
+  color: #98000f;
+}
+.icon-flag:before {
+  content: "\e92c";
+}
+.icon-check-circle:before {
+  content: "\e92d";
+}
+.icon-angle-double-left:before {
+  content: "\e937";
+}
+.icon-angle-double-right:before {
+  content: "\e938";
+}
+.icon-cloud-upload:before {
+  content: "\e939";
+}

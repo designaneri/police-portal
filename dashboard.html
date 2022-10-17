@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HRPS">
+  <meta name="keywords" content="HRPS">
+  <meta name="author" content="HRPS">
+  <link rel="icon" href="img/fav_icon.ico" type="image/x-icon" />
+  <title>HRPS</title>
+
+  <!--Google font-->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+  <!-- Jquery Datatables -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.11.3/datatables.min.css"/>
+
+
+  <!-- Theme css -->
+  <!-- <link rel="stylesheet" type="text/css" href="dist/css/jquery.bs4-scrolling-tabs.min.css"> -->
+  <link rel="stylesheet" type="text/css" href="plugins/datepicker/datepicker3.css">
+  <link rel="stylesheet" type="text/css" href="dist/css/style.css">
+</head>
+
+<body>
+
+    <section class="main_section">
+        
+        <!-- Side menu end -->
+        <div class="side-menu" id="sidemenu">
+
+            <div class="logo-img">
+                <a class="" href="#"><img class="img-fluid" src="dist/img/logo.png" /></a>
+                <a href="#" class="menu-close d-md-none"><i class="icon-times"></i></a>
+            </div>
+            <div class="menu-sec">
+                <ul>
+                    <li class="active">
+                        <a href="dashboard.html"><span class="icon icon-dashboard"></span> Dashboard</a>
+                    </li>
+                    <li class="">
+                        <a href="advanced-search.html"><span class="icon icon-search"></span> Advanced Search</a>
+                    </li>
+                    <li class="">
+                        <a href="files.html"><span class="icon icon-files"></span> Files</a>
+                    </li>
+                    <li class="">
+                        <a href="intelligence-reports.html"><span class="icon icon-incident-reports"></span>Intelligence Reports</a>
+                    </li>
+                    <li class="">
+                        <a href="people.html"><span class="icon icon-people"></span> People</a>
+                    </li>
+                    <li class="">
+                        <a href="organizations.html"><span class="icon icon-organizations"></span> Organizations</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Side menu start -->
+
+        <!-- Main section start -->
+        <div class="main_components" id="maincomponents">
+
+            <!-- Header Start -->
+            <header>
+                <nav class="navbar">
+                    <div class="container-fluid p-0">
+                      
+                        <div class="me-auto">
+                            <button class="btn menu-btns" id="menubtns"><i class="icon-menu"></i></button>
+                        </div>
+                        
+                        <!-- <div class="dropdown user-dropdown">
+                            <button class="btn dropdown-toggle header-info" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                              <img class="img-fluid" src="https://images.pexels.com/photos/5324923/pexels-photo-5324923.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" /> <span>Devid1988</span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </div> -->
+                        <div class="user-info"><i class="icon-user-circle mr-2"></i>Devid1988</div>
+                    </div>
+                  </nav>
+
+            </header>
+            <!-- Header End -->
+    <!-- Breadcrumbs Start -->
+    <div class="breadcrumbs">
+        <ul>
+            <li class="breadcrumb-item">Dashboard</li>
+        </ul>
+    </div>
+    <!-- Breadcrumbs End -->
+
+    <!-- Card section start -->
+    <div class="inner-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-3 col-md-6">
+                    <div class="stats-card">
+                        <span class="stats-card-imgs icon icon-frame"></span>
+                        <div class="stats-card-text">
+                            <h2>01</h2>
+                            <button class="stats-card-btn">Drafted files <span class="right-arrow icon icon-arrow"></span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                    <div class="stats-card">
+                        <span class="stats-card-imgs icon icon-frame1"></span>
+                        <div class="stats-card-text">
+                            <h2>05</h2>
+                            <button class="stats-card-btn">All Requests <span class="right-arrow icon icon-arrow"></span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                    <div class="stats-card">
+                        <span class="stats-card-imgs icon icon-frame2"></span>
+                        <div class="stats-card-text">
+                            <h2>03</h2>
+                            <button class="stats-card-btn">Open Requests <span class="right-arrow icon icon-arrow"></span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                    <div class="stats-card">
+                        <span class="stats-card-imgs icon icon-frame3"></span>
+                        <div class="stats-card-text">
+                            <h2>08</h2>
+                            <button class="stats-card-btn">Approved Requests <span class="right-arrow icon icon-arrow"></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       
+            <div class="row">
+                 <div class="col-md-12">
+                    <div class="search-cardsec">
+                        <div class="row">
+                            <div class="col-xl-3 col-md-6">
+                                <div class="ser-cards">
+                                    <div class="search_icon">
+                                        <span class="icon icon-file"></span>
+                                    </div>
+                                    <h3>Advanced Search</h3>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="ser-cards">
+                                    <div class="search_icon">
+                                        <span class="icon icon-picture"></span>
+                                    </div>
+                                    <h3>Files</h3>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="ser-cards">
+                                    <div class="search_icon">
+                                        <span class="icon icon-file"></span>
+                                    </div>
+                                    <h3>Incident Reports</h3>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="ser-cards">
+                                    <div class="search_icon">
+                                        <span class="icon icon-file"></span>
+                                    </div>
+                                    <h3>Requests</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        
+            <div class="row">
+                <div class="col-xl-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="title-section">
+                                <h3>Drafted files</h3>
+                            </div>
+                            <div class="custom-table">
+                                <div class="table-responsive">
+                                    <table id="exampleone" class="table table-striped" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th>Number</th>
+                                                <th>Author</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><a class="" href="#">2021-001</a></td>
+                                                <td>2021-09-15</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a class="" href="#">2021-001</a></td>
+                                                <td>2021-09-15</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a class="" href="#">2021-001</a></td>
+                                                <td>2021-09-15</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a class="" href="#">2021-001</a></td>
+                                                <td>2021-09-15</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a class="" href="#">2021-001</a></td>
+                                                <td>2021-09-15</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a class="" href="#">2021-001</a></td>
+                                                <td>2021-09-15</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="title-section">
+                                <h3>Recent Requests</h3>
+                            </div>
+                            <div class="custom-table">
+                                <div class="table-responsive">
+                                    <table id="exampletwo" class="table table-striped" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th>Number</th>
+                                                <th>Requested Date</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><a class="" href="#">2021-001</a></td>
+                                                <td>2021-09-15</td>
+                                                <td><span class="badge badge-green">Open</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a class="" href="#">2021-001</a></td>
+                                                <td>2021-09-15</td>
+                                                <td><span class="badge badge-green">Open</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a class="" href="#">2021-001</a></td>
+                                                <td>2021-09-15</td>
+                                                <td><span class="badge badge-green">Open</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a class="" href="#">2021-001</a></td>
+                                                <td>2021-09-15</td>
+                                                <td><span class="badge badge-green">Open</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a class="" href="#">2021-001</a></td>
+                                                <td>2021-09-15</td>
+                                                <td><span class="badge badge-green">Open</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a class="" href="#">2021-001</a></td>
+                                                <td>2021-09-15</td>
+                                                <td><span class="badge badge-green">Open</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Card section end -->
+
+</div>
+<!-- Main section end -->
+
+</section>
+<script src="dist/js/all.js"></script>
+<script src="dist/js/custom_script.js"></script>
+
+</body>
+
+</html>
+  
+
+  <script>
+    // --------------- Initialize Select2 Elements ---------------
+
+    $('#exampleone').DataTable({
+        "paging": false,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": false,
+        "autoWidth": false,
+        "columnDefs": [{
+            "targets": 'no-sort',
+            "orderable": false,
+        }],
+        "language": {
+            "paginate": {
+                "previous": "<i class='icon-angle-left page-arrow align-middle mr-2'></i><span class='align-middle'>Prev</span>",
+                "next": "<span class='align-middle'>Next</span><i class='icon-angle-right page-arrow align-middle ml-2'></i> "
+            }
+        },
+    });
+    $('#exampletwo').DataTable({
+         "paging": false,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": false,
+        "autoWidth": false,
+        "columnDefs": [{
+            "targets": 'no-sort',
+            "orderable": false,
+        }],
+        "language": {
+            "paginate": {
+                "previous": "<i class='icon-angle-left page-arrow align-middle mr-2'></i><span class='align-middle'>Prev</span>",
+                "next": "<span class='align-middle'>Next</span><i class='icon-angle-right page-arrow align-middle ml-2'></i> "
+            }
+        },
+    });
+</script>

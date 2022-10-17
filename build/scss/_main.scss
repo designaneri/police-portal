@@ -1,0 +1,641 @@
+/*-----------------------------------------------------------------------------------
+
+      Template Name:HRPS
+      Template URI:
+      Description: 
+      Author:
+      Author URI:
+
+----------------------------------------------------------------------------------- */
+  /* 1. General CSS
+     1.1. Button CSS
+     1.2. Title CSS
+     1.3. Brand logo CSS */
+
+/*=====================
+   1.General CSS start
+  =====================*/ 
+
+
+html,body {
+    font-family: $font-family;
+    position   : relative;
+    background : $gray-100;
+    font-size  : 16px;
+    margin: 0;
+    padding: 0;
+    &.is-filter-open{
+        overflow-y: hidden;
+    }
+}
+
+h1 {
+    font-size     : 36px;
+    color         : $color-black;
+    font-weight   : 500;
+    text-transform: capitalize;
+}
+
+h2 {
+    font-size     : 30px;
+    color         : $color-black;
+    text-transform: capitalize;
+    font-weight   : 500;
+}
+
+h3 {
+    font-size     : 26px;
+    font-weight   : 500;
+    color         : $color-black;
+}
+
+h4 {
+    font-size     : 22px;
+    text-transform: capitalize;
+    font-weight   : 400;
+    color         : $color-black;
+}
+
+h5 {
+    font-size     : 16px;
+    font-weight   : 400;
+    color         : #222222;
+}
+
+h6 {
+    font-size  : 14px;
+    font-weight: 400;
+    color      : #777777;
+}
+
+ul {
+    padding-left : 0;
+    margin-bottom: 0;
+}
+
+li {
+    display: inline-block;
+}
+
+p {
+    font-size  : 16px;
+    color      : $color-black;
+    line-height: 18px;
+}
+
+a {
+    transition        : 0.5s ease;
+    &:hover{
+        text-decoration   : none;
+        transition        : 0.5s ease;
+    }
+    &:focus{
+        outline: none;
+    }
+}
+hr{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    @include media-breakpoint-up(xl){
+        margin-top: 30px;
+        margin-bottom: 30px;
+     }
+}
+.title-section{
+    position: relative;
+    width: 100%;
+    margin: 0 0 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    h3{
+        margin: 0 0 0 0;
+        font-size: 24px;
+        color: $color-black;
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+    &.inner-title{
+        h3{
+            font-size: 19px;
+        }
+    }
+}
+
+
+
+// ==============================
+//  Dashboard Start
+// ==============================
+
+.main_section{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    min-height: 100vh;
+    .main_components{
+        width: 100%;
+        position: relative;
+        min-height: 100vh;
+        transition: 0.3s all ease;
+        &.sidebar-toggle{
+            // padding-left: 240px;
+            transition: 0.3s all ease;
+            @include media-breakpoint-up(md){
+               padding-left: 0;
+            }
+        }
+         @include media-breakpoint-up(md){
+           padding-left: 240px;
+        }
+         @include media-breakpoint-up(xl){
+           padding-left: 260px;
+        }
+         @include media-breakpoint-up(xxl){
+           padding-left: 280px;
+        }
+         @include media-breakpoint-up(xxxl){
+            padding-left: 300px;
+        }
+        
+    }
+}
+
+// ==============================
+//  Dashboard End
+// ==============================
+
+
+// ==============================
+//  Breadcrumbs Start
+// ==============================
+.breadcrumbs{
+    position: relative;
+    background-color: #ECECEC;
+    padding: 7px 20px 10px 20px;
+    ul{
+        li.breadcrumb-item{
+            padding: 0px 25px 0px 0;
+            position: relative;
+            font-size: 14px;
+            font-weight: 500;
+            a{
+                text-decoration: none;
+                color: $gray-800;
+                &:hover{
+                    color: $color-black
+                }
+            }
+            &::before{
+                content: "\e91e";
+                position: absolute;
+                font-family: 'hrps';
+                right: 6px;
+                z-index: 1;
+                top: 50%;
+                transition: 0.3s all ease;
+                transform: translateY(-50%);
+                font-size: 10px;
+                color: $gray-800;
+                padding: 0;
+            }
+            &.active{
+                padding: 0;
+                color: $color-black;
+                &::before{
+                    display: none;
+                }
+            }
+            &:last-child{
+                padding: 0;
+                &::before{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+// ==============================
+//  Breadcrumbs End
+// ==============================
+
+
+// ==============================
+//  Dashboard Start
+// ==============================
+.inner-wrapper{
+    position: relative;
+    width: 100%;
+    padding: 25px 10px;
+    min-height: 100%;
+    .stats-card{
+        position: relative;
+        background-color: #ffffff;
+        border-radius: 7px;
+        display: flex;
+        align-items: flex-start;
+        margin: 0 0 30px 0;
+        box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.1);
+        transition: 0.3s all ease;
+        padding: 15px;
+        @include media-breakpoint-up(xl){
+             padding: 25px 15px 25px 15px;
+        }
+        @include media-breakpoint-up(xxl){
+             padding: 30px 20px 30px 20px;
+        }
+        @include media-breakpoint-up(xxxl){
+            padding: 35px 40px 35px 40px;
+        }
+        .stats-card-imgs{
+            font-size: 32px;
+            color: $gray-700;
+            @include media-breakpoint-up(xl){
+               font-size: 45px;
+            }
+             @include media-breakpoint-up(xxl){
+               font-size: 50px;
+            }
+        }
+        .right-arrow{
+            font-size: 10px;
+        }
+        .stats-card-text{
+            margin: 0px 0 0 10px;
+            position: relative;
+            @include media-breakpoint-up(xl){
+               margin: 0px 0 0 15px;
+            }
+            h2{
+                font-size: 45px;
+                line-height: 43px;
+                margin: 0 0 5px 0;
+                font-weight: 300;
+                @include media-breakpoint-up(xxl){
+                  font-size: 55px;
+                  line-height: 52px;
+                }
+                @include media-breakpoint-up(xxxl){
+                  font-size: 64px;
+                }
+            }
+            .stats-card-btn{
+                background-color: transparent;
+                border: 0;
+                padding: 0 0 0 0;
+                font-size: 14px;
+                font-weight: 500;
+                text-transform: capitalize;
+                transition: 0.3s all ease;
+                color: $color-black;
+                 @include media-breakpoint-up(xxl){
+                   font-size: 16px;
+                }
+                img{
+                    margin: 0 0 0 5px;
+                    width: 17px;
+                    transform: translate(0px, 0px);
+                    transition: 0.3s all ease;
+                }
+                &:hover{
+                    color: $primary;
+                    transition: 0.3s all ease;
+                    img{
+                        transition: 0.3s all ease;
+                        transform: translate(5px, 0px);
+                    }
+                }
+                 @include media-breakpoint-up(xxxl){
+                  font-size: 18px;
+                }
+            }
+        }
+        &:hover{
+            box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+            transition: 0.3s all ease;
+        }
+    }
+}
+
+.search-cardsec{
+    position: relative;
+    width: 100%;
+    padding: 20px 20px 20px 20px;
+    border-radius: 8px;
+    margin: 0 0 30px 0;
+    background-color: $color-white;
+    .ser-cards{
+        position: relative;
+        width: 100%;
+        padding: 25px 20px 25px 20px;
+        border: 1px solid $gray-300;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        margin: 0 0 25px 0px;
+        @include media-breakpoint-up(xl){
+             margin: 0;
+        }
+        .search_icon{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $gray-300;
+            background-color: $color-white;
+            box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.1);
+            flex-shrink:0;
+        }
+        h3{
+            margin: 0 0 0 20px;
+            position: relative;
+            font-size: 18px;
+            font-weight: 600;
+            @include media-breakpoint-up(md){
+               font-size: 20px;
+            }
+            @include media-breakpoint-up(xl){
+               font-size: 22px;
+            }
+        }        
+    }
+}
+
+.card{
+    border: 0;
+    border-radius: 7px;
+    .card-body{
+        padding: 20px;
+        @include media-breakpoint-up(lg){
+           padding: 25px;
+        }
+        @include media-breakpoint-up(xxl){
+           padding: 30px;
+        }
+        .small-card-body{
+            max-width: 750px;
+            margin: 50px auto;
+        }
+    }
+    .card-header.bg-primary-light{
+        background: rgba(236,174,48,0.2)!important
+    } 
+    .card-inner{
+        &+ .card-inner{
+            margin-top: 30px;
+        }
+    }   
+}
+
+.badge{
+    &.badge-green{
+        color: $color-green;
+        background-color: rgba(75, 159, 71, 0.1);
+        border: 0;
+        padding: 8px 15px;
+        border-radius: 30px;
+        font-size: 13px;
+        font-weight: 400;
+    }
+}
+.text-blue{
+    color: $color-blue;
+}
+.primary-link{
+    color: $primary !important;
+    text-decoration: underline;
+    &.no-underline{
+        text-decoration: none;
+    }
+}
+.file-type{
+    background: #FFEBEB;
+    height: 30px;
+    border-radius: 100%;
+    width: 30px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #F5C2C7;
+    color: #98000F;
+    margin-right: 8px;
+    display: inline-block;
+}
+// ==============================
+//  Dashboard End
+// ==============================
+
+.select-entity-wrap{
+    display: flex;
+    margin: 0 -10px;
+    flex-wrap: wrap;
+    li{
+        width: 100%;
+        padding: 0 10px;
+        margin-bottom: 20px;
+         @include media-breakpoint-up(sm){
+            width: 50%;
+        }
+         @include media-breakpoint-up(lg){
+            width: 100%;
+        }
+        @include media-breakpoint-up(xl){
+            width: 33.33%;
+        }
+        @include media-breakpoint-up(xxl){
+            width: 25%;
+        }
+        @include media-breakpoint-up(xxxl){
+            width: 20%;
+        }
+        a{
+            background: $gray-100;
+            border: 1px solid $gray-400;
+            display: block;
+            padding: 15px 15px 15px 75px;
+            position: relative;
+            min-height: 84px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            @include media-breakpoint-up(md){
+                min-height: 94px;
+                 padding: 17px 17px 17px 77px;
+            }
+            i{
+                height: 44px;
+                width: 44px;
+                text-align: center;
+                border: 1px solid $gray-400;
+                line-height: 44px;
+                color: $color-black;
+                display: inline-block;
+                background: white;
+                border-radius: 100%;
+                @include transition(0.3s);
+                position: absolute;
+                top: 50%;
+                margin-top: -22px;
+                left: 17px;
+                span{
+                    opacity: 0.7;
+                     @include transition(0.3s);
+                }
+            }
+            span{
+                font-size: 17px;
+                color: $color-black;
+                @include media-breakpoint-up(md){
+                   font-size: 18px;
+                }
+            }
+            &:hover{
+                border-color: $primary;
+                background: $primary-opac;
+                i{
+                    border-color: $primary;
+                    color: $primary;
+                    span{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.has-image{
+    position: relative;
+    .image-wrap{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 20px;
+        width: 140px;
+        
+        @include media-breakpoint-up(lg){
+            position: absolute;
+        }
+        img{
+           height: 140px;
+           width: 140px;
+           object-fit:cover;
+           border: 1px solid $gray-400; 
+        }
+    }
+    .row{
+        @include media-breakpoint-up(lg){
+            padding-left: 160px;
+        }
+    }
+    a{
+        font-size: 14px;
+    }
+}
+
+.advanced-search-wrap{
+    position: fixed;
+    top: -100%;
+    left: 0;
+    right: 0;
+    background: white;
+    z-index: 999;
+    padding: 30px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.09);
+    @include transition(all 0.3s);
+    max-height: 100vh;
+    overflow-y: auto;
+    &.open{
+        top: 0;
+    }
+}
+.search-overlay{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 998;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display:none;
+}
+.added-critera{
+    border-top: 1px solid $gray-300;
+    padding-top: 15px;
+    margin-top: 5px;
+}
+
+.gray-card{
+    background-color: $gray-200;
+    padding: 20px;
+    // border-radius: 10px;
+}
+.bordered-card{
+    border: 1px solid #e8e8e8;
+    padding: 20px;
+    .bordered-card-footer{
+        padding: 20px;
+        margin: 0 -20px -20px;
+        background-color: $gray-200;
+        a{
+            color: $color-black;
+        }
+    }
+    &+ .bordered-card{
+        margin-top: 25px;
+    }
+}
+
+.permission-img{
+    max-width: 400px;
+    margin: 0 auto;
+    img{
+        width: 100%;
+    }
+}
+
+.badge {
+    padding: 7px 12px;
+    border-radius: 40px;
+    font-size: 13px;
+    font-weight: 400;
+    &.badge-success {
+        background: #edf5ec;
+        color: #4B9F47;
+    }
+    
+    &.badge-warning {
+        color: #C58400;
+        background: #FBEED4;
+    }
+    
+    &.badge-light {
+        color: #828297;
+        background: #e3e3e3;
+    }
+}
+
+.fa-17{
+    font-size: 17px;
+}
+
+.card .card-body.work-inprogress{
+    text-align: center;
+    height: calc(100vh - 220px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 350px;
+    p{
+        font-size: 16px;   
+    }
+    img{
+        max-width: 70px;
+        margin: 0 auto 30px;
+        display: block;
+        opacity: 0.15;
+    }
+}

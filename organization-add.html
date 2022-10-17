@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HRPS">
+  <meta name="keywords" content="HRPS">
+  <meta name="author" content="HRPS">
+  <link rel="icon" href="img/fav_icon.ico" type="image/x-icon" />
+  <title>HRPS</title>
+
+  <!--Google font-->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+  <!-- Jquery Datatables -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.11.3/datatables.min.css"/>
+
+
+  <!-- Theme css -->
+  <!-- <link rel="stylesheet" type="text/css" href="dist/css/jquery.bs4-scrolling-tabs.min.css"> -->
+  <link rel="stylesheet" type="text/css" href="plugins/datepicker/datepicker3.css">
+  <link rel="stylesheet" type="text/css" href="dist/css/style.css">
+</head>
+
+<body>
+
+    <section class="main_section">
+        
+        <!-- Side menu end -->
+        <div class="side-menu" id="sidemenu">
+
+            <div class="logo-img">
+                <a class="" href="#"><img class="img-fluid" src="dist/img/logo.png" /></a>
+                <a href="#" class="menu-close d-md-none"><i class="icon-times"></i></a>
+            </div>
+            <div class="menu-sec">
+                <ul>
+                    <li class="active">
+                        <a href="dashboard.html"><span class="icon icon-dashboard"></span> Dashboard</a>
+                    </li>
+                    <li class="">
+                        <a href="advanced-search.html"><span class="icon icon-search"></span> Advanced Search</a>
+                    </li>
+                    <li class="">
+                        <a href="files.html"><span class="icon icon-files"></span> Files</a>
+                    </li>
+                    <li class="">
+                        <a href="intelligence-reports.html"><span class="icon icon-incident-reports"></span>Intelligence Reports</a>
+                    </li>
+                    <li class="">
+                        <a href="people.html"><span class="icon icon-people"></span> People</a>
+                    </li>
+                    <li class="">
+                        <a href="organizations.html"><span class="icon icon-organizations"></span> Organizations</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Side menu start -->
+
+        <!-- Main section start -->
+        <div class="main_components" id="maincomponents">
+
+            <!-- Header Start -->
+            <header>
+                <nav class="navbar">
+                    <div class="container-fluid p-0">
+                      
+                        <div class="me-auto">
+                            <button class="btn menu-btns" id="menubtns"><i class="icon-menu"></i></button>
+                        </div>
+                        
+                        <!-- <div class="dropdown user-dropdown">
+                            <button class="btn dropdown-toggle header-info" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                              <img class="img-fluid" src="https://images.pexels.com/photos/5324923/pexels-photo-5324923.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" /> <span>Devid1988</span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </div> -->
+                        <div class="user-info"><i class="icon-user-circle mr-2"></i>Devid1988</div>
+                    </div>
+                  </nav>
+
+            </header>
+            <!-- Header End -->
+<!-- Breadcrumbs Start -->
+<div class="breadcrumbs">
+    <ul>
+        <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+        <li class="breadcrumb-item"><a href="organizations.html">Organizations </a></li>
+        <li class="breadcrumb-item active">Organization Add</li>
+    </ul>
+</div>
+<!-- Breadcrumbs End -->
+<!-- Card section start -->
+<div class="inner-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-section">
+                    <h3>Create organization</h3>
+                </div>
+            </div>
+            <!-- Main Table Start -->
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="nav-tabs-wrap">
+    <ul class="nav nav-tabs badge-style" id="createOrganization" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="Organizations-tab" data-toggle="tab" href="#Organizations" role="tab" aria-controls="Organizations" aria-selected="true">Organizations</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="Businesses-tab" data-toggle="tab" href="#Businesses" role="tab" aria-controls="Businesses" aria-selected="false">Businesses</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="Location-tab" data-toggle="tab" href="#Location" role="tab" aria-controls="Location" aria-selected="false">Locations</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="person-tab" data-toggle="tab" href="#person" role="tab" aria-controls="person" aria-selected="false">Person</a>
+        </li>
+    </ul>
+</div>
+<div class="tab-content" id="createOrganizationContent">
+    <div class="tab-pane fade show active" id="Organizations" role="tabpanel" aria-labelledby="Organizations-tab">
+        <div class="card">
+            <div class="card-body">
+                <form>
+                    <div class="card-inner">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4 col-xxl-3">
+                                <div class="form-group">
+                                    <label class="form-label required">Name</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-xxl-3">
+                                <div class="form-group">
+                                    <label class="form-label required">Organization Type</label>
+                                    <select class="form-control select2" data-placeholder="Select">
+                                        <option value=""></option>
+                                        <option>OMG (Outlaw Motorcycle Gang)</option>
+                                        <option>option2</option>
+                                        <option>option3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-xxl-3">
+                                <div class="form-group">
+                                    <label class="form-label">Sub Group</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="form-label">Description</label>
+                                    <textarea class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="form-label">Expertise/Skills:</label>
+                                    <textarea class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="checkbox-group form-group">
+                                    <h6>Crime Types (Confirmed)</h6>
+                                    <label class="custom-checkbox" for="crimeConfirmed1">Human Trafficking
+                                        <input type="checkbox" id="crimeConfirmed1">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="custom-checkbox" for="crimeConfirmed2">Gun Trafficking
+                                        <input type="checkbox" id="crimeConfirmed2">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="custom-checkbox" for="crimeConfirmed3">Violence
+                                        <input type="checkbox" id="crimeConfirmed3">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="custom-checkbox" for="crimeConfirmed4">Murder
+                                        <input type="checkbox" id="crimeConfirmed4">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="checkbox-group form-group">
+                                    <h6>Crime Types (Suspected)</h6>
+                                    <label class="custom-checkbox" for="crimeSuspected1">Human Trafficking
+                                        <input type="checkbox" id="crimeSuspected1">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="custom-checkbox" for="crimeSuspected2">Gun Trafficking
+                                        <input type="checkbox" id="crimeSuspected2">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="custom-checkbox" for="crimeSuspected3">Violence
+                                        <input type="checkbox" id="crimeSuspected3">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="custom-checkbox" for="crimeSuspected4">Murder
+                                        <input type="checkbox" id="crimeSuspected4">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-inner">
+                        <div class="title-section inner-title">
+                            <h3>Sphere of Operations</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4 col-xxl-3">
+                                <div class="form-group">
+                                    <label class="form-label">Scope/Turf:</label>
+                                    <select class="form-control select2" data-placeholder="Select">
+                                        <option value=""></option>
+                                        <option>International</option>
+                                        <option>option2</option>
+                                        <option>option3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-xxl-3">
+                                <div class="form-group">
+                                    <label class="form-label">Base</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-xxl-3">
+                                <div class="form-group">
+                                    <label class="form-label">Known</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="form-label">Vulnerabilities</label>
+                                    <textarea class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-xxl-3">
+                                <div class="form-group">
+                                    <label class="form-label">Source</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-xxl-3">
+                                <div class="form-group">
+                                    <label class="form-label">Date</label>
+                                    <div class="datepicker-wrap">
+                                        <input type="text" class="form-control datepicker" id="">
+                                        <i class="icon-calendar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="form-label">Capabilities</label>
+                                    <textarea class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-xxl-3">
+                                <div class="form-group">
+                                    <label class="form-label">Source</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-xxl-3">
+                                <div class="form-group">
+                                    <label class="form-label">Date</label>
+                                    <div class="datepicker-wrap">
+                                        <input type="text" class="form-control datepicker" id="">
+                                        <i class="icon-calendar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="form-label">Limitations</label>
+                                    <textarea class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-xxl-3">
+                                <div class="form-group">
+                                    <label class="form-label">Source</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-xxl-3">
+                                <div class="form-group">
+                                    <label class="form-label">Date</label>
+                                    <div class="datepicker-wrap">
+                                        <input type="text" class="form-control datepicker" id="">
+                                        <i class="icon-calendar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="checkbox-group form-group">
+                                    <h6>Positive Background Checks </h6>
+                                    <label class="custom-checkbox" for="backgroundcheck1">Check 1
+                                        <input type="checkbox" id="backgroundcheck1">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="custom-checkbox" for="backgroundcheck2">Check 2
+                                        <input type="checkbox" id="backgroundcheck2">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="custom-checkbox" for="backgroundcheck3">Check 3
+                                        <input type="checkbox" id="backgroundcheck3">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="custom-checkbox" for="backgroundcheck4">Check 4
+                                        <input type="checkbox" id="backgroundcheck4">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="btn-wrap save-cancel-wrap">
+                                    <a href="#" class="btn btn-small btn-primary save-new" data-save="organizations">Save</a>
+                                    <button class="btn btn-small btn-light">Reset</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+    <div class="tab-pane fade" id="Businesses" role="tabpanel" aria-labelledby="Businesses-tab">
+      <div class="card">
+        <div class="card-body">
+            <div class="card-inner">
+                <div class="title-section inner-title">
+                    <h3>Businesses</h3>
+                    <a class="btn-primary btn-small" data-toggle="modal" data-target="#addBackgroundCheckModal"><i class="icon-plus"></i> Add</a>
+                </div>
+                <div class="custom-table custom-table-sm">
+                    <div class="table-responsive">
+                        <table id="personBusinesses-Table" class="table table-striped datatable" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Association </th>
+                                    <th>Is Confirm </th>
+                                    <th>Effective From</th>
+                                    <th>Effective To</th>
+                                    <th>Established By</th>
+                                    <th class="no-sort th-w-100">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Hells Angel Mississauga</td>
+                                    <td>
+                                        Founding Member
+                                    </td>
+                                    <td>
+                                        Yes
+                                    </td>
+                                    <td>
+                                        2019-01-01 
+                                    </td>
+                                    <td> - </td>
+                                    <td>
+                                        Olivia Newton
+                                    </td>
+                                    <td>
+                                        <div class="action-btns">
+                                            <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                            <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Hells Angel Mississauga</td>
+                                    <td>
+                                        Founding Member
+                                    </td>
+                                    <td>
+                                        Yes
+                                    </td>
+                                    <td>
+                                        2019-01-01 
+                                    </td>
+                                    <td> - </td>
+                                    <td>
+                                        Olivia Newton
+                                    </td>
+                                    <td>
+                                        <div class="action-btns">
+                                            <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                            <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Hells Angel Mississauga</td>
+                                    <td>
+                                        Founding Member
+                                    </td>
+                                    <td>
+                                        Yes
+                                    </td>
+                                    <td>
+                                        2019-01-01 
+                                    </td>
+                                    <td> - </td>
+                                    <td>
+                                        Olivia Newton
+                                    </td>
+                                    <td>
+                                        <div class="action-btns">
+                                            <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                            <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Hells Angel Mississauga</td>
+                                    <td>
+                                        Founding Member
+                                    </td>
+                                    <td>
+                                        Yes
+                                    </td>
+                                    <td>
+                                        2019-01-01 
+                                    </td>
+                                    <td> - </td>
+                                    <td>
+                                        Olivia Newton
+                                    </td>
+                                    <td>
+                                        <div class="action-btns">
+                                            <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                            <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="Location" role="tabpanel" aria-labelledby="Location-tab">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-inner">
+                    <div class="title-section inner-title">
+                        <h3>Location</h3>
+                        <a class="btn-primary btn-small" data-toggle="modal" data-target="#addBackgroundCheckModal"><i class="icon-plus"></i> Add</a>
+                    </div>
+                    <div class="custom-table custom-table-sm">
+                        <div class="table-responsive">
+                            <table id="personLocation-Table" class="table table-striped datatable" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Association </th>
+                                        <th>Is Confirm </th>
+                                        <th>Effective From</th>
+                                        <th>Effective To</th>
+                                        <th>Established By</th>
+                                        <th class="no-sort th-w-100">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>210 Main St Mississaug</td>
+                                        <td>
+                                            Main Residence
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td> - </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                        <td>210 Main St Mississaug</td>
+                                        <td>
+                                            Main Residence
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td> - </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                        <td>210 Main St Mississaug</td>
+                                        <td>
+                                            Main Residence
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td> - </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                        <td>210 Main St Mississaug</td>
+                                        <td>
+                                            Main Residence
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td> - </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="person" role="tabpanel" aria-labelledby="person-tab">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-inner">
+                    <div class="title-section inner-title">
+                        <h3>People</h3>
+                        <a class="btn-primary btn-small" data-toggle="modal" data-target="#addBackgroundCheckModal"><i class="icon-plus"></i> Add</a>
+                    </div>
+                    <div class="custom-table custom-table-sm">
+                        <div class="table-responsive">
+                            <table id="personLocation-Table" class="table table-striped datatable" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Person</th>
+                                        <th>Association To This Organization </th>
+                                        <th>Date</th>
+                                        <th>Established By</th>
+                                        <th class="no-sort th-w-100">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Fred Flintstone </td>
+                                        <td>
+                                            Founder
+                                        </td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                        <td>Fred Flintstone </td>
+                                        <td>
+                                            Founder
+                                        </td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                        <td>Fred Flintstone </td>
+                                        <td>
+                                            Founder
+                                        </td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                        <td>Fred Flintstone </td>
+                                        <td>
+                                            Founder
+                                        </td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Main Table End -->
+        </div>
+    </div>
+</div>
+<!-- Card section end -->
+</div>
+<!-- Main section end -->
+</section>
+<script src="dist/js/all.js"></script>
+<script src="dist/js/custom_script.js"></script>
+
+</body>
+
+</html>
+<script>
+$('#exampletwo').DataTable({
+    "paging": false,
+    "lengthChange": false,
+    "searching": false,
+    "ordering": true,
+    "info": false,
+    "autoWidth": false,
+    "columnDefs": [{
+        "targets": 'no-sort',
+        "orderable": false,
+    }],
+    // dom: "<<t><<'table-footer' <pl>i>>>",
+    "language": {
+        "info": "_START_ - _END_ of _TOTAL_ items",
+        "sLengthMenu": "_MENU_ items per page",
+        "paginate": {
+            "previous": "<i class='icon-angle-left page-arrow align-middle mr-2'></i>",
+            "next": "<i class='icon-angle-right page-arrow align-middle ml-2'></i> "
+        }
+    },
+});
+$('#examplethree').DataTable({
+    "paging": false,
+    "lengthChange": false,
+    "searching": false,
+    "ordering": true,
+    "info": false,
+    "autoWidth": false,
+    "columnDefs": [{
+        "targets": 'no-sort',
+        "orderable": false,
+    }],
+    // dom: "<<t><<'table-footer' <pl>i>>>",
+    "language": {
+        "info": "_START_ - _END_ of _TOTAL_ items",
+        "sLengthMenu": "_MENU_ items per page",
+        "paginate": {
+            "previous": "<i class='icon-angle-left page-arrow align-middle mr-2'></i>",
+            "next": "<i class='icon-angle-right page-arrow align-middle ml-2'></i> "
+        }
+    },
+});
+$('#examplefour').DataTable({
+    "paging": false,
+    "lengthChange": false,
+    "searching": false,
+    "ordering": true,
+    "info": false,
+    "autoWidth": false,
+    "columnDefs": [{
+        "targets": 'no-sort',
+        "orderable": false,
+    }],
+    // dom: "<<t><<'table-footer' <pl>i>>>",
+    "language": {
+        "info": "_START_ - _END_ of _TOTAL_ items",
+        "sLengthMenu": "_MENU_ items per page",
+        "paginate": {
+            "previous": "<i class='icon-angle-left page-arrow align-middle mr-2'></i>",
+            "next": "<i class='icon-angle-right page-arrow align-middle ml-2'></i> "
+        }
+    },
+});
+$('#examplefive').DataTable({
+    "paging": true,
+    "lengthChange": true,
+    "searching": false,
+    "ordering": true,
+    "info": true,
+    "autoWidth": false,
+    "columnDefs": [{
+        "targets": 'no-sort',
+        "orderable": false,
+    }],
+    dom: "<<t><<'table-footer' <pl>i>>>",
+    "language": {
+        "info": "_START_ - _END_ of _TOTAL_ items",
+        "sLengthMenu": "_MENU_ items per page",
+        "paginate": {
+            "previous": "<i class='icon-angle-left page-arrow align-middle mr-2'></i>",
+            "next": "<i class='icon-angle-right page-arrow align-middle ml-2'></i> "
+        }
+    },
+});
+$('#examplesix').DataTable({
+    "paging": true,
+    "lengthChange": true,
+    "searching": false,
+    "ordering": true,
+    "info": true,
+    "autoWidth": false,
+    "columnDefs": [{
+        "targets": 'no-sort',
+        "orderable": false,
+    }],
+    dom: "<<t><<'table-footer' <pl>i>>>",
+    "language": {
+        "info": "_START_ - _END_ of _TOTAL_ items",
+        "sLengthMenu": "_MENU_ items per page",
+        "paginate": {
+            "previous": "<i class='icon-angle-left page-arrow align-middle mr-2'></i>",
+            "next": "<i class='icon-angle-right page-arrow align-middle ml-2'></i> "
+        }
+    },
+});
+$('#example1').DataTable({
+    "paging": true,
+    "lengthChange": true,
+    "searching": false,
+    "ordering": true,
+    "info": true,
+    "autoWidth": false,
+    "columnDefs": [{
+        "targets": 'no-sort',
+        "orderable": false,
+    }],
+    dom: "<<t><<'table-footer' <pl>i>>>",
+    "language": {
+        "info": "_START_ - _END_ of _TOTAL_ items",
+        "sLengthMenu": "_MENU_ items per page",
+        "paginate": {
+            "previous": "<i class='icon-angle-left page-arrow align-middle mr-2'></i>",
+            "next": "<i class='icon-angle-right page-arrow align-middle ml-2'></i> "
+        }
+    },
+});
+$('#example2').DataTable({
+    "paging": true,
+    "lengthChange": true,
+    "searching": false,
+    "ordering": true,
+    "info": true,
+    "autoWidth": false,
+    "columnDefs": [{
+        "targets": 'no-sort',
+        "orderable": false,
+    }],
+    dom: "<<t><<'table-footer' <pl>i>>>",
+    "language": {
+        "info": "_START_ - _END_ of _TOTAL_ items",
+        "sLengthMenu": "_MENU_ items per page",
+        "paginate": {
+            "previous": "<i class='icon-angle-left page-arrow align-middle mr-2'></i>",
+            "next": "<i class='icon-angle-right page-arrow align-middle ml-2'></i> "
+        }
+    },
+});
+$('#example3').DataTable({
+    "paging": true,
+    "lengthChange": true,
+    "searching": false,
+    "ordering": true,
+    "info": true,
+    "autoWidth": false,
+    "columnDefs": [{
+        "targets": 'no-sort',
+        "orderable": false,
+    }],
+    dom: "<<t><<'table-footer' <pl>i>>>",
+    "language": {
+        "info": "_START_ - _END_ of _TOTAL_ items",
+        "sLengthMenu": "_MENU_ items per page",
+        "paginate": {
+            "previous": "<i class='icon-angle-left page-arrow align-middle mr-2'></i>",
+            "next": "<i class='icon-angle-right page-arrow align-middle ml-2'></i> "
+        }
+    },
+});
+$('#example4').DataTable({
+    "paging": true,
+    "lengthChange": true,
+    "searching": false,
+    "ordering": true,
+    "info": true,
+    "autoWidth": false,
+    "columnDefs": [{
+        "targets": 'no-sort',
+        "orderable": false,
+    }],
+    dom: "<<t><<'table-footer' <pl>i>>>",
+    "language": {
+        "info": "_START_ - _END_ of _TOTAL_ items",
+        "sLengthMenu": "_MENU_ items per page",
+        "paginate": {
+            "previous": "<i class='icon-angle-left page-arrow align-middle mr-2'></i>",
+            "next": "<i class='icon-angle-right page-arrow align-middle ml-2'></i> "
+        }
+    },
+});
+</script>

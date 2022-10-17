@@ -1,0 +1,2353 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HRPS">
+  <meta name="keywords" content="HRPS">
+  <meta name="author" content="HRPS">
+  <link rel="icon" href="img/fav_icon.ico" type="image/x-icon" />
+  <title>HRPS</title>
+
+  <!--Google font-->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+  <!-- Jquery Datatables -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.11.3/datatables.min.css"/>
+
+
+  <!-- Theme css -->
+  <!-- <link rel="stylesheet" type="text/css" href="dist/css/jquery.bs4-scrolling-tabs.min.css"> -->
+  <link rel="stylesheet" type="text/css" href="plugins/datepicker/datepicker3.css">
+  <link rel="stylesheet" type="text/css" href="dist/css/style.css">
+</head>
+
+<body>
+
+    <section class="main_section">
+        
+        <!-- Side menu end -->
+        <div class="side-menu" id="sidemenu">
+
+            <div class="logo-img">
+                <a class="" href="#"><img class="img-fluid" src="dist/img/logo.png" /></a>
+                <a href="#" class="menu-close d-md-none"><i class="icon-times"></i></a>
+            </div>
+            <div class="menu-sec">
+                <ul>
+                    <li class="active">
+                        <a href="dashboard.html"><span class="icon icon-dashboard"></span> Dashboard</a>
+                    </li>
+                    <li class="">
+                        <a href="advanced-search.html"><span class="icon icon-search"></span> Advanced Search</a>
+                    </li>
+                    <li class="">
+                        <a href="files.html"><span class="icon icon-files"></span> Files</a>
+                    </li>
+                    <li class="">
+                        <a href="intelligence-reports.html"><span class="icon icon-incident-reports"></span>Intelligence Reports</a>
+                    </li>
+                    <li class="">
+                        <a href="people.html"><span class="icon icon-people"></span> People</a>
+                    </li>
+                    <li class="">
+                        <a href="organizations.html"><span class="icon icon-organizations"></span> Organizations</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Side menu start -->
+
+        <!-- Main section start -->
+        <div class="main_components" id="maincomponents">
+
+            <!-- Header Start -->
+            <header>
+                <nav class="navbar">
+                    <div class="container-fluid p-0">
+                      
+                        <div class="me-auto">
+                            <button class="btn menu-btns" id="menubtns"><i class="icon-menu"></i></button>
+                        </div>
+                        
+                        <!-- <div class="dropdown user-dropdown">
+                            <button class="btn dropdown-toggle header-info" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                              <img class="img-fluid" src="https://images.pexels.com/photos/5324923/pexels-photo-5324923.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" /> <span>Devid1988</span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </div> -->
+                        <div class="user-info"><i class="icon-user-circle mr-2"></i>Devid1988</div>
+                    </div>
+                  </nav>
+
+            </header>
+            <!-- Header End -->
+<!-- Breadcrumbs Start -->
+<div class="breadcrumbs">
+    <ul>
+        <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+        <li class="breadcrumb-item"><a href="people.html">Person</a></li>
+        <li class="breadcrumb-item active">Add Person</li>
+    </ul>
+</div>
+<!-- Breadcrumbs End -->
+<!-- Card section start -->
+<div class="inner-wrapper">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-body">
+                <div class="nav-tabs-wrap">
+    <ul class="nav nav-tabs badge-style wrapped-tabs" id="newPerson" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="person-tab" data-toggle="tab" href="#person" role="tab" aria-controls="person" aria-selected="true">Person</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="aliases-tab" data-toggle="tab" href="#aliases" role="tab" aria-controls="aliases" aria-selected="false">Aliases</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="contactInfo-tab" data-toggle="tab" href="#contactInfo" role="tab" aria-controls="contactInfo" aria-selected="false">Contact Info</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="Tattoo-tab" data-toggle="tab" href="#Tattoo" role="tab" aria-controls="Tattoo" aria-selected="false">Tattoos / Marks</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="backgroundChecks-tab" data-toggle="tab" href="#backgroundChecks" role="tab" aria-controls="backgroundChecks" aria-selected="false">Background Checks</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="personOrganizations-tab" data-toggle="tab" href="#personOrganizations" role="tab" aria-controls="personOrganizations" aria-selected="false">Organizations</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="personBusinesses-tab" data-toggle="tab" href="#personBusinesses" role="tab" aria-controls="personBusinesses" aria-selected="false">Businesses</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="personLocation-tab" data-toggle="tab" href="#personLocation" role="tab" aria-controls="personLocation" aria-selected="false">Locations</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="personAssociates-tab" data-toggle="tab" href="#personAssociates" role="tab" aria-controls="personAssociates" aria-selected="false">Associates</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="personVehicles-tab" data-toggle="tab" href="#personVehicles" role="tab" aria-controls="personVehicles" aria-selected="false">Vehicles</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="personWeapons-tab" data-toggle="tab" href="#personWeapons" role="tab" aria-controls="personWeapons" aria-selected="false">Weapons</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="personAttachments-tab" data-toggle="tab" href="#personAttachments" role="tab" aria-controls="personAttachments" aria-selected="false">Attachments</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="personEvents-tab" data-toggle="tab" href="#personEvents" role="tab" aria-controls="personEvents" aria-selected="false">Events</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="personEventProjects-tab" data-toggle="tab" href="#personEventProjects" role="tab" aria-controls="personEventProjects" aria-selected="false">Event Projects</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="personIndustries-tab" data-toggle="tab" href="#personIndustries" role="tab" aria-controls="personIndustries" aria-selected="false">Industries</a>
+        </li>
+    </ul>
+</div>
+<div class="tab-content" id="newPersonContent">
+    <div class="tab-pane fade show active" id="person" role="tabpanel" aria-labelledby="person-tab">
+        <div class="card">
+            <div class="card-body">
+                <form>
+                    <div class="has-image">
+                        <div class="text-center image-wrap">
+                            <img src="img/logo.svg" alt="">
+                            <a href="#" title="" class="primary-link mt-1">Set Picture</a>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4 col-xxl-3">
+                                <div class="form-group">
+                                    <label class="form-label required">First Name</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-xxl-3">
+                                <div class="form-group">
+                                    <label class="form-label">Middle Name</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-xxl-3">
+                                <div class="form-group">
+                                    <label class="form-label required">Last Name</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-xxl-3">
+                                <div class="form-group">
+                                    <label class="form-label">Gender</label>
+                                    <select class="form-control select2" data-placeholder="Select">
+                                        <option value=""></option>
+                                        <option>option1</option>
+                                        <option>option2</option>
+                                        <option>option3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-xxl-3">
+                                <div class="form-group">
+                                    <label class="form-label">Eye Colour</label>
+                                    <select class="form-control select2" data-placeholder="Select">
+                                        <option value=""></option>
+                                        <option>option1</option>
+                                        <option>option2</option>
+                                        <option>option3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-xxl-3">
+                                <div class="form-group">
+                                    <label class="form-label">Hair Colour</label>
+                                    <select class="form-control select2" data-placeholder="Select">
+                                        <option value=""></option>
+                                        <option>option1</option>
+                                        <option>option2</option>
+                                        <option>option3</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 col-xxl-3">
+                            <div class="form-group">
+                                <label class="form-label">Race</label>
+                                <input type="text" name="" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-xxl-3">
+                            <div class="form-group">
+                                <label class="form-label">Occupation/Employer</label>
+                                <input type="text" name="" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-xxl-3">
+                            <div class="form-group">
+                                <label class="form-label">Height</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">FT.</button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">FT.</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-xxl-3">
+                            <div class="form-group">
+                                <label class="form-label">Weight</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kg.</button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Kg.</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-xxl-3">
+                            <div class="form-group">
+                                <label class="form-label">DOB</label>
+                                <div class="datepicker-wrap">
+                                    <input type="text" class="form-control datepicker" id="">
+                                    <i class="icon-calendar"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-xxl-3">
+                            <div class="form-group">
+                                <label class="form-label">Place of Birth</label>
+                                <input type="text" name="" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-xxl-3">
+                            <div class="form-group">
+                                <label class="custom-checkbox no-label" for="deceased-checkbox">Deceased ?
+                                    <input type="checkbox" id="deceased-checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-xxl-3 deceased-details" style="display: none;">
+                            <div class="form-group">
+                                <label class="form-label">Deceased Date</label>
+                                <div class="datepicker-wrap">
+                                    <input type="text" class="form-control datepicker" id="">
+                                    <i class="icon-calendar"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-xxl-3 deceased-details" style="display: none;">
+                            <div class="form-group">
+                                <label class="form-label">Place of Decease</label>
+                                <input type="text" name="" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-xxl-3">
+                            <div class="form-group">
+                                <label class="form-label">FPS</label>
+                                <input type="text" name="" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-xxl-3">
+                            <div class="form-group">
+                                <label class="form-label">CID</label>
+                                <input type="text" name="" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-xxl-3">
+                            <div class="form-group">
+                                <label class="form-label">Languages</label>
+                                <select class="form-control multi-select2" multiple data-placeholder="None">
+                                    <option>None</option>
+                                    <option>option1</option>
+                                    <option>option2</option>
+                                    <option>option3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-xxl-3">
+                            <div class="form-group">
+                                <label class="form-label">Drivers License #</label>
+                                <input type="text" name="" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-xxl-3">
+                            <div class="form-group">
+                                <label class="form-label">DL Province</label>
+                                <select class="form-control select2" data-placeholder="Select">
+                                    <option value=""></option>
+                                    <option>option1</option>
+                                    <option>option2</option>
+                                    <option>option3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-xxl-3">
+                            <div class="form-group">
+                                <label class="form-label">DL Class</label>
+                                <input type="text" name="" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-xxl-3">
+                            <div class="form-group">
+                                <label class="form-label">DL Status</label>
+                                <input type="text" name="" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-8 col-xxl-6">
+                            <div class="form-group">
+                                <label class="form-label">Positive Background Checks</label>
+                                <input type="text" name="" class="form-control" value="check 1, check 2" readonly>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="form-label required">Alerts/Comments</label>
+                                <textarea class="form-control"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="form-label required">Analyst Notes</label>
+                                <textarea class="form-control"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="form-label required">Intelligence Gaps</label>
+                                <textarea class="form-control"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="form-label required">Significant or Protected C Info</label>
+                                <textarea class="form-control"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="btn-wrap save-cancel-wrap">
+                                <a href="#" class="btn btn-small btn-primary save-new" data-save="person">Save</a>
+                                <button class="btn btn-small btn-light">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="aliases" role="tabpanel" aria-labelledby="aliases-tab">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-inner">
+                    <div class="title-section inner-title">
+                        <h3>Nick Names</h3>
+                        <a class="btn-primary btn-small" data-toggle="modal" data-target="#addNickNameModal"><i class="icon-plus"></i> Add</a>
+                    </div>
+                    <div class="custom-table custom-table-sm">
+                        <div class="table-responsive">
+                            <table id="nickName-Table" class="table table-striped datatable" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Nick Name</th>
+                                        <th class="no-sort th-w-100">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Billy</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Joe</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Becky</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-inner">
+                    <div class="title-section inner-title">
+                        <h3>Aliases</h3>
+                        <a class="btn-primary btn-small" data-toggle="modal" data-target="#addAliasesModal"><i class="icon-plus"></i> Add</a>
+                    </div>
+                    <div class="custom-table custom-table-sm">
+                        <div class="table-responsive">
+                            <table id="Aliases-Table" class="table table-striped datatable" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>First Name </th>
+                                        <th>Middle Name </th>
+                                        <th>Last Name</th>
+                                        <th class="no-sort th-w-100">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Dokidis</td>
+                                        <td>Allison</td>
+                                        <td>Jaylon</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                        <td>Dokidis</td>
+                                        <td>Allison</td>
+                                        <td>Jaylon</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                        <td>Dokidis</td>
+                                        <td>Allison</td>
+                                        <td>Jaylon</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="contactInfo" role="tabpanel" aria-labelledby="contactInfo-tab">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-inner">
+                    <div class="title-section inner-title">
+                        <h3>Phone</h3>
+                        <a class="btn-primary btn-small" data-toggle="modal" data-target="#addPhoneModal"><i class="icon-plus"></i> Add</a>
+                    </div>
+                    <div class="custom-table custom-table-sm">
+                        <div class="table-responsive">
+                            <table id="Phone-Table" class="table table-striped datatable" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Phone Type</th>
+                                        <th>Phone Number</th>
+                                        <th>Effective From</th>
+                                        <th>Effective To</th>
+                                        <th>is Current</th>
+                                        <th class="no-sort th-w-100">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Mobile</td>
+                                        <td>254-865-8542</td>
+                                        <td>2021-09-25</td>
+                                        <td>2021-09-28</td>
+                                        <td>
+                                            <label class="custom-checkbox no-text" for="current-checkbox">
+                                                <input type="checkbox" id="current-checkbox" checked>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Residential</td>
+                                        <td>+1-202-555-0164</td>
+                                        <td>2021-09-25</td>
+                                        <td>2021-09-28</td>
+                                        <td>
+                                            <label class="custom-checkbox no-text" for="current-checkbox">
+                                                <input type="checkbox" id="current-checkbox" checked>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Office</td>
+                                        <td>254-865-8542</td>
+                                        <td>2021-09-25</td>
+                                        <td>2021-09-28</td>
+                                        <td>
+                                            <label class="custom-checkbox no-text" for="current-checkbox">
+                                                <input type="checkbox" id="current-checkbox" checked>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-inner">
+                    <div class="title-section inner-title">
+                        <h3>Social Media</h3>
+                        <a class="btn-primary btn-small" data-toggle="modal" data-target="#addSocialMediaModal"><i class="icon-plus"></i> Add</a>
+                    </div>
+                    <div class="custom-table custom-table-sm">
+                        <div class="table-responsive">
+                            <table id="Socialmedia-Table" class="table table-striped datatable" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Social Media</th>
+                                        <th>Middle Name </th>
+                                        <th>Last Name</th>
+                                        <th class="no-sort th-w-100">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Dokidis</td>
+                                        <td>Allison</td>
+                                        <td>Jaylon</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                        <td>Dokidis</td>
+                                        <td>Allison</td>
+                                        <td>Jaylon</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                        <td>Dokidis</td>
+                                        <td>Allison</td>
+                                        <td>Jaylon</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="Tattoo" role="tabpanel" aria-labelledby="Tattoo-tab">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-inner">
+                    <div class="title-section inner-title">
+                        <h3>Tattoos/ Marks List</h3>
+                        <a class="btn-primary btn-small" data-toggle="modal" data-target="#addTattooModal"><i class="icon-plus"></i> Add</a>
+                    </div>
+                    <div class="custom-table custom-table-sm">
+                        <div class="table-responsive">
+                            <table id="Tattoo-Table" class="table table-striped datatable" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Tattoo/ Mark</th>
+                                        <th>Is Main</th>
+                                        <th>Image</th>
+                                        <th class="no-sort th-w-100">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Lorem Ipsum</td>
+                                        <td>
+                                            <label class="custom-checkbox no-text" for="ismain-checkbox">
+                                                <input type="checkbox" id="ismain-checkbox" checked>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="primary-link">
+                                                Link to File
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#"><i class="icon-check"></i></a>
+                                                <a class=" edit-btn" href="#"><i class="icon-eye"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lorem Ipsum</td>
+                                        <td>
+                                            <label class="custom-checkbox no-text" for="ismain-checkbox">
+                                                <input type="checkbox" id="ismain-checkbox" checked>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="primary-link">
+                                                Link to File
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#"><i class="icon-check"></i></a>
+                                                <a class=" edit-btn" href="#"><i class="icon-eye"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lorem Ipsum</td>
+                                        <td>
+                                            <label class="custom-checkbox no-text" for="ismain-checkbox">
+                                                <input type="checkbox" id="ismain-checkbox" checked>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="primary-link">
+                                                Link to File
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#"><i class="icon-check"></i></a>
+                                                <a class=" edit-btn" href="#"><i class="icon-eye"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="backgroundChecks" role="tabpanel" aria-labelledby="backgroundChecks-tab">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-inner">
+                    <div class="title-section inner-title">
+                        <h3>Background Checks</h3>
+                        <a class="btn-primary btn-small" data-toggle="modal" data-target="#addbackgroundCheckModal"><i class="icon-plus"></i> Add</a>
+                    </div>
+                    <div class="custom-table custom-table-sm">
+                        <div class="table-responsive">
+                            <table id="BackgroundCheck-Table" class="table table-striped datatable" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Check Type</th>
+                                        <th>Date</th>
+                                        <th>Performed By </th>
+                                        <th>Is Positive Hit</th>
+                                        <th>Result Summary</th>
+                                        <th class="no-sort th-w-100">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>DDL</td>
+                                        <td>
+                                            2021-09-25
+                                        </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            Lorem Ipsum is simply dummy text of the printing.
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>SOR</td>
+                                        <td>
+                                            2021-09-25
+                                        </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            Lorem Ipsum is simply dummy text of the printing.
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>CPIC</td>
+                                        <td>
+                                            2021-09-25
+                                        </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            No
+                                        </td>
+                                        <td>
+                                            Lorem Ipsum is simply dummy text of the printing.
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>MTO</td>
+                                        <td>
+                                            2021-09-25
+                                        </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            Lorem Ipsum is simply dummy text of the printing.
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="personOrganizations" role="tabpanel" aria-labelledby="personOrganizations-tab">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-inner">
+                    <div class="title-section inner-title">
+                        <h3>Organizations</h3>
+                        <a class="btn-primary btn-small" href="organizations.html"><i class="icon-plus"></i> Add</a>
+                    </div>
+                    <div class="custom-table custom-table-sm">
+                        <div class="table-responsive">
+                            <table id="personOrganizations-Table" class="table table-striped datatable" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Association </th>
+                                        <th>Is Confirm </th>
+                                        <th>Effective From</th>
+                                        <th>Effective To</th>
+                                        <th>Established By</th>
+                                        <th class="no-sort th-w-100">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Hells Angel Mississauga</td>
+                                        <td>
+                                            Founding Member
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td> - </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" edit-btn" href="#" title="Edit Link"><i class="icon-file-edit"></i></a>
+                                                <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hells Angel Mississauga</td>
+                                        <td>
+                                            Founding Member
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td> - </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" edit-btn" href="#" title="Edit Link"><i class="icon-file-edit"></i></a>
+                                                <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hells Angel Mississauga</td>
+                                        <td>
+                                            Founding Member
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td> - </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" edit-btn" href="#" title="Edit Link"><i class="icon-file-edit"></i></a>
+                                                <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hells Angel Mississauga</td>
+                                        <td>
+                                            Founding Member
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td> - </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" edit-btn" href="#" title="Edit Link"><i class="icon-file-edit"></i></a>
+                                                <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="personBusinesses" role="tabpanel" aria-labelledby="personBusinesses-tab">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-inner">
+                    <div class="title-section inner-title">
+                        <h3>Businesses</h3>
+                        <a class="btn-primary btn-small" data-toggle="modal" data-target="#addBackgroundCheckModal"><i class="icon-plus"></i> Add</a>
+                    </div>
+                    <div class="custom-table custom-table-sm">
+                        <div class="table-responsive">
+                            <table id="personBusinesses-Table" class="table table-striped datatable" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Association </th>
+                                        <th>Is Confirm </th>
+                                        <th>Effective From</th>
+                                        <th>Effective To</th>
+                                        <th>Established By</th>
+                                        <th class="no-sort th-w-100">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Hells Angel Mississauga</td>
+                                        <td>
+                                            Founding Member
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td> - </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hells Angel Mississauga</td>
+                                        <td>
+                                            Founding Member
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td> - </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hells Angel Mississauga</td>
+                                        <td>
+                                            Founding Member
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td> - </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hells Angel Mississauga</td>
+                                        <td>
+                                            Founding Member
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td> - </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="personLocation" role="tabpanel" aria-labelledby="personLocation-tab">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-inner">
+                    <div class="title-section inner-title">
+                        <h3>Location</h3>
+                        <a class="btn-primary btn-small" data-toggle="modal" data-target="#addBackgroundCheckModal"><i class="icon-plus"></i> Add</a>
+                    </div>
+                    <div class="custom-table custom-table-sm">
+                        <div class="table-responsive">
+                            <table id="personLocation-Table" class="table table-striped datatable" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Association </th>
+                                        <th>Is Confirm </th>
+                                        <th>Effective From</th>
+                                        <th>Effective To</th>
+                                        <th>Established By</th>
+                                        <th class="no-sort th-w-100">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>210 Main St Mississaug</td>
+                                        <td>
+                                            Main Residence
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td> - </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                        <td>210 Main St Mississaug</td>
+                                        <td>
+                                            Main Residence
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td> - </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                        <td>210 Main St Mississaug</td>
+                                        <td>
+                                            Main Residence
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td> - </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                        <td>210 Main St Mississaug</td>
+                                        <td>
+                                            Main Residence
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td> - </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="personAssociates" role="tabpanel" aria-labelledby="personAssociates-tab">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-inner">
+                    <div class="title-section inner-title">
+                        <h3>Associates</h3>
+                        <a class="btn-primary btn-small" data-toggle="modal" data-target="#addBackgroundCheckModal"><i class="icon-plus"></i> Add</a>
+                    </div>
+                    <div class="custom-table custom-table-sm">
+                        <div class="table-responsive">
+                            <table id="personAssociates-Table" class="table table-striped datatable" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Person</th>
+                                        <th>Association </th>
+                                        <th>Is Confirm </th>
+                                        <th>Effective From</th>
+                                        <th>Effective To</th>
+                                        <th>Established By</th>
+                                        <th class="no-sort th-w-100">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Hells Angel Mississauga</td>
+                                        <td>
+                                            Father Of
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td> - </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hells Angel Mississauga</td>
+                                        <td>
+                                           Father Of
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td> - </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hells Angel Mississauga</td>
+                                        <td>
+                                           Father Of
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td> - </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hells Angel Mississauga</td>
+                                        <td>
+                                           Father Of
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td> - </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="personVehicles" role="tabpanel" aria-labelledby="personVehicles-tab">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-inner">
+                    <div class="title-section inner-title">
+                        <h3>Vehicles</h3>
+                        <a class="btn-primary btn-small" data-toggle="modal" data-target="#addVehicleModal"><i class="icon-plus"></i> Add</a>
+                    </div>
+                    <div class="custom-table custom-table-sm">
+                        <div class="table-responsive">
+                            <table id="personAssociates-Table" class="table table-striped datatable" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Make</th>
+                                        <th>Model</th>
+                                        <th>Year</th>
+                                        <th>Colour</th>
+                                        <th>Association </th>
+                                        <th>Is Confirm </th>
+                                        <th>Effective From</th>
+                                        <th>Effective To</th>
+                                        <th>Established By</th>
+                                        <th class="no-sort th-w-100">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Aura</td>
+                                        <td>
+                                            ILX
+                                        </td>
+                                        <td>
+                                            2022
+                                        </td>
+                                        <td>Blue</td>
+                                        <td>Personal Vehicle</td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td> - </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Aura</td>
+                                        <td>
+                                            ILX
+                                        </td>
+                                        <td>
+                                            2022
+                                        </td>
+                                        <td>Blue</td>
+                                        <td>Personal Vehicle</td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td> - </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Aura</td>
+                                        <td>
+                                            ILX
+                                        </td>
+                                        <td>
+                                            2022
+                                        </td>
+                                        <td>Blue</td>
+                                        <td>Personal Vehicle</td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td> - </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Aura</td>
+                                        <td>
+                                            ILX
+                                        </td>
+                                        <td>
+                                            2022
+                                        </td>
+                                        <td>Blue</td>
+                                        <td>Personal Vehicle</td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td> - </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="personWeapons" role="tabpanel" aria-labelledby="personWeapons-tab">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-inner">
+                    <div class="title-section inner-title">
+                        <h3>Weapons</h3>
+                        <a class="btn-primary btn-small" data-toggle="modal" data-target="#addBackgroundCheckModal"><i class="icon-plus"></i> Add</a>
+                    </div>
+                    <div class="custom-table custom-table-sm">
+                        <div class="table-responsive">
+                            <table id="personAssociates-Table" class="table table-striped datatable" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Type</th>
+                                        <th>Concealm</th>
+                                        <th>Calib</th>
+                                        <th>Serial #</th>
+                                        <th>Association </th>
+                                        <th>Is Confirm </th>
+                                        <th>Effective From</th>
+                                        <th>Effective To</th>
+                                        <th>Established By</th>
+                                        <th class="no-sort th-w-100">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Blunt Object</td>
+                                        <td>
+                                            Open
+                                        </td>
+                                        <td>
+                                            45
+                                        </td>
+                                        <td>-</td>
+                                        <td>Owner Of</td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td> - </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Blunt Object</td>
+                                        <td>
+                                            Open
+                                        </td>
+                                        <td>
+                                            45
+                                        </td>
+                                        <td>-</td>
+                                        <td>Owner Of</td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td> - </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Blunt Object</td>
+                                        <td>
+                                            Open
+                                        </td>
+                                        <td>
+                                            45
+                                        </td>
+                                        <td>-</td>
+                                        <td>Owner Of</td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td> - </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Blunt Object</td>
+                                        <td>
+                                            Open
+                                        </td>
+                                        <td>
+                                            45
+                                        </td>
+                                        <td>-</td>
+                                        <td>Owner Of</td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td> - </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="personAttachments" role="tabpanel" aria-labelledby="personAttachments-tab">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-inner">
+                    <div class="title-section inner-title">
+                        <h3>Attachments</h3>
+                        <a class="btn-primary btn-small" data-toggle="modal" data-target="#addAttachmentModal"><i class="icon-plus"></i> Add</a>
+                    </div>
+                    <div class="custom-table custom-table-sm">
+                        <div class="table-responsive">
+                            <table id="examplefive" class="table table-striped datatable" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Media Type</th>
+                                        <th>Date Captured</th>
+                                        <th>Description</th>
+                                        <th>File Link</th>
+                                        <th>MD5 Hash</th>
+                                        <th class="no-sort">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><i class="icon-pdf file-type"></i>PDF</td>
+                                        <td>2021-09-15</td>
+                                        <td>Duis aute irure dolor</td>
+                                        <td><a href="" class="primary-link">Link to file</a></td>
+                                        <td>Apache Commons</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" data-toggle="tooltip" data-placement="bottom" title="Open"><i class="icon-eye"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="icon-pdf file-type"></i>PDF</td>
+                                        <td>2021-09-15</td>
+                                        <td>Duis aute irure dolor</td>
+                                        <td><a href="" class="primary-link">Link to file</a></td>
+                                        <td>Apache Commons</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" data-toggle="tooltip" data-placement="bottom" title="Open"><i class="icon-eye"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="icon-pdf file-type"></i>PDF</td>
+                                        <td>2021-09-15</td>
+                                        <td>Duis aute irure dolor</td>
+                                        <td><a href="" class="primary-link">Link to file</a></td>
+                                        <td>Apache Commons</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" data-toggle="tooltip" data-placement="bottom" title="Open"><i class="icon-eye"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="icon-pdf file-type"></i>PDF</td>
+                                        <td>2021-09-15</td>
+                                        <td>Duis aute irure dolor</td>
+                                        <td><a href="" class="primary-link">Link to file</a></td>
+                                        <td>Apache Commons</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" data-toggle="tooltip" data-placement="bottom" title="Open"><i class="icon-eye"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="icon-pdf file-type"></i>PDF</td>
+                                        <td>2021-09-15</td>
+                                        <td>Duis aute irure dolor</td>
+                                        <td><a href="" class="primary-link">Link to file</a></td>
+                                        <td>Apache Commons</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" data-toggle="tooltip" data-placement="bottom" title="Open"><i class="icon-eye"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="personEvents" role="tabpanel" aria-labelledby="personEvents-tab">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-inner">
+                    <div class="title-section inner-title">
+                        <h3>Events</h3>
+                        <a class="btn-primary btn-small" data-toggle="modal" data-target="#addAttachmentModal"><i class="icon-plus"></i> Add</a>
+                    </div>
+                    <div class="custom-table custom-table-sm">
+                        <div class="table-responsive">
+                            <table id="examplefive" class="table table-striped datatable" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Description</th>
+                                        <th>Planned Date</th>
+                                        <th>Occurrence Date</th>
+                                        <th>Threat Level </th>
+                                        <th>Risk Level</th>
+                                        <th class="no-sort">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>John Doe</td>
+                                        <td>Duis aute irure dolor</td>
+                                        <td>2021-09-15</td>
+                                        <td>2021-09-15</td>
+                                        <td>Level 1</td>
+                                        <td>-</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                  <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                        <td>John Doe</td>
+                                        <td>Duis aute irure dolor</td>
+                                        <td>2021-09-15</td>
+                                        <td>2021-09-15</td>
+                                        <td>Level 1</td>
+                                        <td>-</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                  <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                        <td>John Doe</td>
+                                        <td>Duis aute irure dolor</td>
+                                        <td>2021-09-15</td>
+                                        <td>2021-09-15</td>
+                                        <td>Level 1</td>
+                                        <td>-</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                  <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                        <td>John Doe</td>
+                                        <td>Duis aute irure dolor</td>
+                                        <td>2021-09-15</td>
+                                        <td>2021-09-15</td>
+                                        <td>Level 1</td>
+                                        <td>-</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                  <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                        <td>John Doe</td>
+                                        <td>Duis aute irure dolor</td>
+                                        <td>2021-09-15</td>
+                                        <td>2021-09-15</td>
+                                        <td>Level 1</td>
+                                        <td>-</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                  <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="personEventProjects" role="tabpanel" aria-labelledby="personEventProjects-tab">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-inner">
+                    <div class="title-section inner-title">
+                        <h3>Event Projects</h3>
+                        <a class="btn-primary btn-small" data-toggle="modal" data-target="#addAttachmentModal"><i class="icon-plus"></i> Add</a>
+                    </div>
+                    <div class="custom-table custom-table-sm">
+                        <div class="table-responsive">
+                            <table id="examplefive" class="table table-striped datatable" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Date Started</th>
+                                        <th>Date Completed</th>
+                                        <th>Status</th>
+                                        <th class="no-sort">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>John Doe</td>
+                                        <td>2021-09-15</td>
+                                        <td>2021-09-15</td>
+                                        <td>Completed</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                  <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                        <td>John Doe</td>
+                                        <td>2021-09-15</td>
+                                        <td>2021-09-15</td>
+                                        <td>Completed</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                  <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                        <td>John Doe</td>
+                                        <td>2021-09-15</td>
+                                        <td>2021-09-15</td>
+                                        <td>Completed</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                  <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                        <td>John Doe</td>
+                                        <td>2021-09-15</td>
+                                        <td>2021-09-15</td>
+                                        <td>Completed</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                  <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                        <td>John Doe</td>
+                                        <td>2021-09-15</td>
+                                        <td>2021-09-15</td>
+                                        <td>Completed</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                  <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="personIndustries" role="tabpanel" aria-labelledby="personIndustries-tab">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-inner">
+                    <div class="title-section inner-title">
+                        <h3>Industries</h3>
+                        <a class="btn-primary btn-small" data-toggle="modal" data-target="#addAttachmentModal"><i class="icon-plus"></i> Add</a>
+                    </div>
+                    <div class="custom-table custom-table-sm">
+                        <div class="table-responsive">
+                            <table id="examplefive" class="table table-striped datatable" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Industry</th>
+                                        <th>Role</th>
+                                        <th>Effective From </th>
+                                        <th>Effective To </th>
+                                        <th>Established By</th>
+                                        <th class="no-sort">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>John Doe</td>
+                                        <td>Duis aute irure dolor</td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td> - </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                  <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                        <td>John Doe</td>
+                                        <td>Duis aute irure dolor</td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td> - </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                  <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                        <td>John Doe</td>
+                                        <td>Duis aute irure dolor</td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td> - </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                  <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                       <td>John Doe</td>
+                                        <td>Duis aute irure dolor</td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td> - </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                  <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                       <td>John Doe</td>
+                                        <td>Duis aute irure dolor</td>
+                                        <td>
+                                            2019-01-01 
+                                        </td>
+                                        <td> - </td>
+                                        <td>
+                                            Olivia Newton
+                                        </td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="addPhoneModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Phone</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label required">Phone Type</label>
+                            <select class="form-control select2" data-placeholder="Select">
+                                <option value=""></option>
+                                <option selected>Residential</option>
+                                <option>option2</option>
+                                <option>option3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label required">Phone #</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-6 align-self-end">
+                        <div class="form-group">
+                            <label class="form-label required">Effective From</label>
+                            <div class="datepicker-wrap mb-0">
+                                <input type="text" class="form-control datepicker" id="" placeholder="From">
+                                <i class="icon-calendar"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 align-self-end">
+                        <div class="form-group">
+                            <label class="custom-checkbox" for="effectiveTo">Effective To
+                                <input type="checkbox" id="effectiveTo">
+                                <span class="checkmark"></span>
+                            </label>
+                            <div class="datepicker-wrap mb-0">
+                                <input type="text" class="form-control datepicker" disabled id="effectiveToDatepicker" placeholder="To">
+                                <i class="icon-calendar"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                       
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-small btn-light" data-dismiss="modal"><i class="icon-times"></i> Cancel</button>
+                <button type="button" class="btn btn-small btn-primary"><i class="icon-plus"></i> Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="addSocialMediaModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Social Media</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label required">Social Media Type</label>
+                            <select class="form-control select2" data-placeholder="Select">
+                                <option value=""></option>
+                                <option selected>Facebook</option>
+                                <option>option2</option>
+                                <option>option3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label required">Handle</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-6 align-self-end">
+                        <div class="form-group">
+                            <label class="form-label required">Effective From</label>
+                            <div class="datepicker-wrap mb-0">
+                                <input type="text" class="form-control datepicker" id="" placeholder="From">
+                                <i class="icon-calendar"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 align-self-end">
+                        <div class="form-group">
+                            <label class="custom-checkbox" for="effectiveTo">Effective To
+                                <input type="checkbox" id="effectiveTo">
+                                <span class="checkmark"></span>
+                            </label>
+                            <div class="datepicker-wrap mb-0">
+                                <input type="text" class="form-control datepicker" disabled id="effectiveToDatepicker" placeholder="To">
+                                <i class="icon-calendar"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                       
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-small btn-light" data-dismiss="modal"><i class="icon-times"></i> Cancel</button>
+                <button type="button" class="btn btn-small btn-primary"><i class="icon-plus"></i> Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="addTattooModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Tattoo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label required">Tatoo/Mark</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Placement</label>
+                            <select class="form-control select2" data-placeholder="Select">
+                                <option value=""></option>
+                                <option>option1</option>
+                                <option>option2</option>
+                                <option>option3</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label required">Description</label>
+                            <textarea class="form-control"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Image</label>
+                            <div class="dropzone-wrap dropzone-sm">
+                                <form action="/" class="new-dropzone" id="TattooDropzone">
+                                    <div class="dz-message needsclick">
+                                        <div class="file-upload-inner needsclick">
+                                            <div class="cloud-upload-wrap needsclick">
+                                                <i class="fas fa-cloud-upload-alt"></i>
+                                            </div>
+                                            <h3 class="needsclick">Drag your files here to upload</h3>
+                                            <p class="needsclick mb-0"><span class="subtxt">or click to browse</span></p>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="custom-checkbox" for="isMainImg">Is Main Image
+                                <input type="checkbox" id="isMainImg">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/tattoo-img.svg" alt="" class="w-100">
+                    </div>
+                </div>
+                       
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-small btn-light" data-dismiss="modal"><i class="icon-times"></i> Cancel</button>
+                <button type="button" class="btn btn-small btn-primary"><i class="icon-plus"></i> Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="addbackgroundCheckModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Background Check</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label required">Check Type</label>
+                            <select class="form-control select2" data-placeholder="Select">
+                                <option value=""></option>
+                                <option selected>DDL</option>
+                                <option>option2</option>
+                                <option>option3</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label required">Date</label>
+                            <div class="datepicker-wrap mb-0">
+                                <input type="text" class="form-control datepicker" id="" placeholder="">
+                                <i class="icon-calendar"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="form-label required">Performed By</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="form-label required">Result Summary</label>
+                            <textarea class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="custom-checkbox" for="isPositiveHit">Is Positive Hit
+                                <input type="checkbox" id="isPositiveHit">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                       
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-small btn-light" data-dismiss="modal"><i class="icon-times"></i> Cancel</button>
+                <button type="button" class="btn btn-small btn-primary"><i class="icon-plus"></i> Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="addVehicleModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Vehicle</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label">Make</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label">Modal</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label">VIN</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label">Colour</label>
+                            <select class="form-control select2" data-placeholder="Select">
+                                <option value=""></option>
+                                <option selected>DDL</option>
+                                <option>option2</option>
+                                <option>option3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label">Plate</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label">Year</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label">Lease</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label">Plate Province</label>
+                            <select class="form-control select2" data-placeholder="Select">
+                                <option value=""></option>
+                                <option selected>Combobox</option>
+                                <option>option2</option>
+                                <option>option3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="form-label">Comments</label>
+                            <textarea class="form-control"></textarea>
+                        </div>
+                    </div>
+                </div>
+                       
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-small btn-light" data-dismiss="modal"><i class="icon-times"></i> Cancel</button>
+                <button type="button" class="btn btn-small btn-primary"><i class="icon-plus"></i> Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Main section end -->
+</section>
+<script src="dist/js/all.js"></script>
+<script src="dist/js/custom_script.js"></script>
+
+</body>
+
+</html>
+
+

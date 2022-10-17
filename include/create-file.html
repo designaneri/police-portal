@@ -1,0 +1,646 @@
+<div class="arrow-scrollable-wrap">
+    <div class="nav-tabs-wrap">
+        <ul class="nav nav-tabs badge-style" id="createFile" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="fileInfo-tab" data-toggle="tab" href="#fileInfo" role="tab" aria-controls="fileInfo" aria-selected="true">File Info</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="narrativeStatements-tab" data-toggle="tab" href="#narrativeStatements" role="tab" aria-controls="narrativeStatements" aria-selected="false">Narrative Statements</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="dissemination-tab" data-toggle="tab" href="#dissemination" role="tab" aria-controls="dissemination" aria-selected="false">Dissemination</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="attachments-tab" data-toggle="tab" href="#attachments" role="tab" aria-controls="attachments" aria-selected="false">Attachments</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="approval-tab" data-toggle="tab" href="#approval" role="tab" aria-controls="approval" aria-selected="false">Approvals</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="tab-content" id="createFileContent">
+    <div class="tab-pane fade show active" id="fileInfo" role="tabpanel" aria-labelledby="fileInfo-tab">
+        <div class="card">
+            <div class="card-body">
+                <form>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 col-xxl-3">
+                            <div class="form-group">
+                                <label class="form-label">Status</label>
+                                <select class="form-control select2" data-placeholder="Select">
+                                    <option value=""></option>
+                                    <option>option1</option>
+                                    <option>option2</option>
+                                    <option>option3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-xxl-3">
+                            <div class="form-group">
+                                <label class="form-label">Classification</label>
+                                <select class="form-control select2" data-placeholder="Select">
+                                    <option value=""></option>
+                                    <option>option1</option>
+                                    <option>option2</option>
+                                    <option>option3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-xxl-3">
+                            <div class="form-group">
+                                <label class="form-label">Protection Level</label>
+                                <select class="form-control select2" data-placeholder="Select">
+                                    <option value=""></option>
+                                    <option>option1</option>
+                                    <option>option2</option>
+                                    <option>option3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-xxl-3">
+                            <div class="form-group">
+                                <label class="form-label required">Source Agency</label>
+                                <input type="text" name="" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-xxl-3">
+                            <div class="form-group">
+                                <label class="form-label">HRPS Occurrence #</label>
+                                <input type="text" name="" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-xxl-3">
+                            <div class="form-group">
+                                <label class="form-label">Crime Group Type</label>
+                                <input type="text" name="" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-xxl-3">
+                            <div class="form-group">
+                                <label class="form-label required">Author</label>
+                                <input type="text" name="" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-xxl-3">
+                            <div class="form-group">
+                                <label class="form-label required">Badge #</label>
+                                <input type="text" name="" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-xxl-3">
+                            <div class="form-group">
+                                <label class="form-label required">Unit</label>
+                                <input type="text" name="" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-xxl-3">
+                            <div class="form-group">
+                                <label class="form-label required">Contact Email</label>
+                                <input type="email" name="" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-xxl-3">
+                            <div class="form-group">
+                                <label class="form-label">Contact Phone</label>
+                                <input type="tel" name="" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 col-xxl-3">
+                            <label class="custom-checkbox no-label" for="event-related">Is Event Related
+                                <input type="checkbox" id="event-related">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-xxl-3">
+                            <div class="form-group">
+                                <label class="form-label">Event Name</label>
+                                <select class="form-control select2" data-placeholder="Select">
+                                    <option value=""></option>
+                                    <option>option1</option>
+                                    <option>option2</option>
+                                    <option>option3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkbox-group form-group">
+                        <h6>Distribution</h6>
+                        <label class="custom-checkbox" for="distribution1">ACIIS
+                            <input type="checkbox" id="distribution1">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="custom-checkbox" for="distribution2">CISO
+                            <input type="checkbox" id="distribution2">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="custom-checkbox" for="distribution3">PTA
+                            <input type="checkbox" id="distribution3">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label required">Summary</label>
+                        <textarea class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Purpose (Action Plan)</label>
+                        <textarea class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Narrative Statement</label>
+                        <textarea class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Comments</label>
+                        <textarea class="form-control"></textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="narrativeStatements" role="tabpanel" aria-labelledby="narrativeStatements-tab">
+        <div class="card">
+            <div class="card-body">
+                <div class="title-section inner-title">
+                    <h3>Narrative Statements</h3>
+                    <a class="btn-primary btn-small" data-toggle="modal" data-target="#addNarrativeModal"><i class="icon-plus"></i> Add</a>
+                </div>
+                <div class="custom-table custom-table-sm">
+                    <div class="table-responsive">
+                        <table id="exampletwo" class="table table-striped" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Narrative Statements</th>
+                                    <th>Source</th>
+                                    <th>Reliability</th>
+                                    <th class="no-sort">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Playground Memory</td>
+                                    <td>Memory</td>
+                                    <td>Evidence Level</td>
+                                    <td>
+                                        <div class="action-btns">
+                                            <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                            <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Traveling to India for the First Time</td>
+                                    <td>Traveling</td>
+                                    <td>Relevant Endpoint</td>
+                                    <td>
+                                        <div class="action-btns">
+                                            <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                            <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Memorable Experience</td>
+                                    <td>Memorable</td>
+                                    <td>Literature Search</td>
+                                    <td>
+                                        <div class="action-btns">
+                                            <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                            <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Playground Memory</td>
+                                    <td>Memory</td>
+                                    <td>Evidence Level</td>
+                                    <td>
+                                        <div class="action-btns">
+                                            <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                            <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Traveling to India for the First Time</td>
+                                    <td>Traveling</td>
+                                    <td>Relevant Endpoint</td>
+                                    <td>
+                                        <div class="action-btns">
+                                            <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                            <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Memorable Experience</td>
+                                    <td>Memorable</td>
+                                    <td>Literature Search</td>
+                                    <td>
+                                        <div class="action-btns">
+                                            <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                            <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Playground Memory</td>
+                                    <td>Memory</td>
+                                    <td>Evidence Level</td>
+                                    <td>
+                                        <div class="action-btns">
+                                            <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                            <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Traveling to India for the First Time</td>
+                                    <td>Traveling</td>
+                                    <td>Relevant Endpoint</td>
+                                    <td>
+                                        <div class="action-btns">
+                                            <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                            <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Memorable Experience</td>
+                                    <td>Memorable</td>
+                                    <td>Literature Search</td>
+                                    <td>
+                                        <div class="action-btns">
+                                            <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                            <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Playground Memory</td>
+                                    <td>Memory</td>
+                                    <td>Evidence Level</td>
+                                    <td>
+                                        <div class="action-btns">
+                                            <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                            <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Traveling to India for the First Time</td>
+                                    <td>Traveling</td>
+                                    <td>Relevant Endpoint</td>
+                                    <td>
+                                        <div class="action-btns">
+                                            <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                            <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Memorable Experience</td>
+                                    <td>Memorable</td>
+                                    <td>Literature Search</td>
+                                    <td>
+                                        <div class="action-btns">
+                                            <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                            <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="dissemination" role="tabpanel" aria-labelledby="dissemination-tab">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-inner">
+                    <div class="title-section inner-title">
+                        <h3>Dissemination List</h3>
+                        <a class="btn-primary btn-small" data-toggle="modal" data-target="#addDisseminationModal"><i class="icon-plus"></i> Add</a>
+                    </div>
+                    <div class="custom-table custom-table-sm">
+                        <div class="table-responsive">
+                            <table id="examplethree" class="table table-striped" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Agency</th>
+                                        <th>Unit</th>
+                                        <th>Rank</th>
+                                        <th>Badge #</th>
+                                        <th>Email</th>
+                                        <th class="no-sort">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Muse Agency</td>
+                                        <td>Main Street</td>
+                                        <td>21</td>
+                                        <td>215</td>
+                                        <td>museagency125@gmail.com</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Expression Production</td>
+                                        <td>Main Street</td>
+                                        <td>21</td>
+                                        <td>85</td>
+                                        <td>info@expression.com</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Expression Production</td>
+                                        <td>Main Street</td>
+                                        <td>12</td>
+                                        <td>85</td>
+                                        <td>info@expression.com</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Expression Production</td>
+                                        <td>Main Street</td>
+                                        <td>12</td>
+                                        <td>85</td>
+                                        <td>info@expression.com</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Muse Agency</td>
+                                        <td>Main Street</td>
+                                        <td>21</td>
+                                        <td>85</td>
+                                        <td>info@expression.com</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-inner">
+                    <div class="title-section inner-title">
+                        <h3>System Dissemination Log</h3>
+                    </div>
+                    <div class="custom-table custom-table-sm">
+                        <div class="table-responsive">
+                            <table id="examplefour" class="table table-striped" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Requestor</th>
+                                        <th>Request#</th>
+                                        <th>Request Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Olivia Newton</td>
+                                        <td>215418</td>
+                                        <td>2021-09-25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Isla Harry</td>
+                                        <td>215158</td>
+                                        <td>2021-09-25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Alex John</td>
+                                        <td>315418</td>
+                                        <td>2021-09-25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Olivia Newton</td>
+                                        <td>215480</td>
+                                        <td>2021-09-25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Olivia Newton</td>
+                                        <td>215658</td>
+                                        <td>2021-09-25</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="attachments" role="tabpanel" aria-labelledby="attachments-tab">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-inner">
+                    <div class="title-section inner-title">
+                        <h3>Attachments</h3>
+                        <a class="btn-primary btn-small" data-toggle="modal" data-target="#addAttachmentModal"><i class="icon-plus"></i> Add</a>
+                    </div>
+                    <div class="custom-table custom-table-sm">
+                        <div class="table-responsive">
+                            <table id="examplefive" class="table table-striped" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Media Type</th>
+                                        <th>Date Captured</th>
+                                        <th>Description</th>
+                                        <th>File Link</th>
+                                        <th>MD5 Hash</th>
+                                        <th class="no-sort">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><i class="icon-pdf file-type"></i>PDF</td>
+                                        <td>2021-09-15</td>
+                                        <td>Duis aute irure dolor</td>
+                                        <td><a href="" class="primary-link">Link to file</a></td>
+                                        <td>Apache Commons</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" data-toggle="tooltip" data-placement="bottom" title="Open"><i class="icon-eye"></i></a>
+                                                <a class=" delete-btn" href="#" data-toggle="tooltip" data-placement="bottom" title="Remove"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="icon-pdf file-type"></i>PDF</td>
+                                        <td>2021-09-15</td>
+                                        <td>Duis aute irure dolor</td>
+                                        <td><a href="" class="primary-link">Link to file</a></td>
+                                        <td>Apache Commons</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" data-toggle="tooltip" data-placement="bottom" title="Open"><i class="icon-eye"></i></a>
+                                                <a class=" delete-btn" href="#" data-toggle="tooltip" data-placement="bottom" title="Remove"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="icon-pdf file-type"></i>PDF</td>
+                                        <td>2021-09-15</td>
+                                        <td>Duis aute irure dolor</td>
+                                        <td><a href="" class="primary-link">Link to file</a></td>
+                                        <td>Apache Commons</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" data-toggle="tooltip" data-placement="bottom" title="Open"><i class="icon-eye"></i></a>
+                                                <a class=" delete-btn" href="#" data-toggle="tooltip" data-placement="bottom" title="Remove"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="icon-pdf file-type"></i>PDF</td>
+                                        <td>2021-09-15</td>
+                                        <td>Duis aute irure dolor</td>
+                                        <td><a href="" class="primary-link">Link to file</a></td>
+                                        <td>Apache Commons</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" data-toggle="tooltip" data-placement="bottom" title="Open"><i class="icon-eye"></i></a>
+                                                <a class=" delete-btn" href="#" data-toggle="tooltip" data-placement="bottom" title="Remove"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="icon-pdf file-type"></i>PDF</td>
+                                        <td>2021-09-15</td>
+                                        <td>Duis aute irure dolor</td>
+                                        <td><a href="" class="primary-link">Link to file</a></td>
+                                        <td>Apache Commons</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a class=" edit-btn" href="#" data-toggle="tooltip" data-placement="bottom" title="Open"><i class="icon-eye"></i></a>
+                                                <a class=" delete-btn" href="#" data-toggle="tooltip" data-placement="bottom" title="Remove"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="approval" role="tabpanel" aria-labelledby="approval-tab">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-inner">
+                    <div class="title-section inner-title">
+                        <h3>Approval</h3>
+                        <a class="btn-primary btn-small" data-toggle="modal" data-target="#addApprovalModal"><i class="icon-plus"></i> Add</a>
+                    </div>
+                    <div class="custom-table custom-table-sm">
+                        <div class="table-responsive">
+                            <table id="examplesix" class="table table-striped" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Approval Type</th>
+                                        <th>Name</th>
+                                        <th>Badge #</th>
+                                        <th>Date</th>
+                                        <th class="no-sort">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>District Liason</td>
+                                        <td>Robert Fox</td>
+                                        <td>12345</td>
+                                        <td>2021-09-15</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a href="#" class=" edit-btn"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>District Liason</td>
+                                        <td>Robert Fox</td>
+                                        <td>12345</td>
+                                        <td>2021-09-15</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a href="#" class=" edit-btn"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>District Liason</td>
+                                        <td>Robert Fox</td>
+                                        <td>12345</td>
+                                        <td>2021-09-15</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a href="#" class=" edit-btn"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>District Liason</td>
+                                        <td>Robert Fox</td>
+                                        <td>12345</td>
+                                        <td>2021-09-15</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a href="#" class=" edit-btn"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>District Liason</td>
+                                        <td>Robert Fox</td>
+                                        <td>12345</td>
+                                        <td>2021-09-15</td>
+                                        <td>
+                                            <div class="action-btns">
+                                                <a href="#" class=" edit-btn"><i class="icon-pencil"></i></a>
+                                                <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

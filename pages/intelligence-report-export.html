@@ -1,0 +1,247 @@
+@@include('../include/header.html')
+<!-- Breadcrumbs Start -->
+<div class="breadcrumbs">
+    <ul>
+        <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+        <li class="breadcrumb-item"><a href="intelligence-reports.html">Intelligence Reports</a></li>
+        <li class="breadcrumb-item"><a href="intelligence-report-request.html">Requests</a></li>
+        <li class="breadcrumb-item">Request Export</li>
+    </ul>
+</div>
+<!-- Breadcrumbs End -->
+<!-- Card section start -->
+<div class="inner-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-section">
+                    <div>
+                        <h3>Select Export Criteria</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- Main Table Start -->
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="title-section inner-title">
+                            <h3>Selected Results</h3>
+                            <div>
+                                <a class="btn-primary btn-small"><i class="icon-report"></i> Generate Report</a>
+                                <a class="btn-primary btn-small"  data-toggle="modal" data-target="#sendReviewModal"><i class="icon-paper-plane"></i> Send for Review</a>
+                            </div>
+                            
+                        </div>
+                        <div class="bordered-card">
+                            <div class="card-inner">    
+                                <div class="title-section inner-title">
+                                    <h4>Files</h4>
+                                    <div class="d-flex">
+                                        <a class="btn-primary btn-small align-items-center mr-2 d-inline-flex" data-toggle="modal" data-target="#chooseFieldsModal"><i class="icon-paper-plane"></i> Choose Fields</a>
+                                        
+                                        <select class="form-control select2 w-auto small-select min-w-150" data-placeholder="Select">
+                                            <option value=""></option>
+                                            <option selected>Not Exported</option>
+                                            <option>PDF</option>
+                                            <option>CSV</option>
+                                        </select>
+                                    </div>
+                                    
+                                </div>
+                                <div class="custom-table ">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped datatable" style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>Files</th>
+                                                    <th>Created Date</th>
+                                                    <th>Created By</th>
+                                                    <th>Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <label class="custom-checkbox" for="file1">
+                                                            <input type="checkbox" id="file1" checked>
+                                                            <span class="checkmark"></span> File 1
+                                                        </label>
+                                                        
+                                                    </td>
+                                                    <td>2021-0011</td>
+                                                    <td>2021-09-15</td>
+                                                    <td>
+                                                        <div class="action-btns">
+                                                            <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label class="custom-checkbox" for="file2">
+                                                            <input type="checkbox" id="file2" checked>
+                                                            <span class="checkmark"></span> File 2
+                                                        </label>
+                                                        
+                                                    </td>
+                                                    <td>2021-0011</td>
+                                                    <td>2021-09-15</td>
+                                                    <td>
+                                                        <div class="action-btns">
+                                                            <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="card-inner">
+                                <div class="title-section inner-title">
+                                    <h4>People</h4>
+                                    <div class="d-flex">
+                                        <a class="btn-primary btn-small align-items-center mr-2 d-inline-flex"><i class="icon-paper-plane"></i> Choose Fields</a>
+                                        <select class="form-control select2 w-auto small-select min-w-150" data-placeholder="Select">
+                                            <option value=""></option>
+                                            <option selected>Not Exported</option>
+                                            <option>PDF</option>
+                                            <option>CSV</option>
+                                        </select>
+                                    </div>
+                                    
+                                </div>
+                                <div class="custom-table ">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped datatable" style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>First Name</th>
+                                                    <th>Last Name</th>
+                                                    <th>Date of Birth</th>
+                                                    <th>Address</th>
+                                                    <th>Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <label class="custom-checkbox" for="elenor">
+                                                            <input type="checkbox" id="elenor" checked>
+                                                            <span class="checkmark"></span> Elenor
+                                                        </label>
+                                                        
+                                                    </td>
+                                                    <td>Newton</td>
+                                                    <td>2021-09-15</td>
+                                                    <td>1901 Thornridge Cir. Shiloh, Hawaii 81063</td>
+                                                    <td>
+                                                        <div class="action-btns">
+                                                            <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label class="custom-checkbox" for="Cody">
+                                                            <input type="checkbox" id="Cody" checked>
+                                                            <span class="checkmark"></span> Cody
+                                                        </label>
+                                                        
+                                                    </td>
+                                                    <td>Moser</td>
+                                                    <td>2021-09-15</td>
+                                                    <td>2118 Thornridge Cir. Syracuse, Connecticut 35624</td>
+                                                    <td>
+                                                        <div class="action-btns">
+                                                            <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="card-inner">
+                                <div class="title-section inner-title">
+                                    <h4>Organizations</h4>
+                                    <div class="d-flex">
+                                        <a class="btn-primary btn-small align-items-center mr-2 d-inline-flex"><i class="icon-paper-plane"></i> Choose Fields</a>
+                                        <select class="form-control select2 w-auto small-select min-w-150" data-placeholder="Select">
+                                            <option value=""></option>
+                                            <option selected>Not Exported</option>
+                                            <option>PDF</option>
+                                            <option>CSV</option>
+                                        </select>
+                                    </div>
+                                    
+                                </div>
+                                <div class="custom-table ">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped datatable" style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Organization Type</th>
+                                                    <th>Created Date</th>
+                                                    <th>Created By</th>
+                                                    <th>Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <label class="custom-checkbox" for="organisation1">
+                                                            <input type="checkbox" id="organisation1" checked>
+                                                            <span class="checkmark"></span> Hells Angel Mississauga
+                                                        </label>
+                                                    </td>
+                                                    <td>Functional</td>
+                                                    <td>2021-09-15</td>
+                                                    <td>Theresa Webb</td>
+                                                    <td>
+                                                        <div class="action-btns">
+                                                            <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label class="custom-checkbox" for="organisation1">
+                                                            <input type="checkbox" id="organisation1" checked>
+                                                            <span class="checkmark"></span> Hells Angel Mississauga
+                                                        </label>
+                                                    </td>
+                                                    <td>Functional</td>
+                                                    <td>2021-09-15</td>
+                                                    <td>Theresa Webb</td>
+                                                    <td>
+                                                        <div class="action-btns">
+                                                            <a class=" delete-btn" href="#"><i class="icon-trash"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Main Table End -->
+        </div>
+    </div>
+</div>
+<!-- Card section end -->
+</div>
+<!-- Main section end -->
+</section>
+@@include('../include/footer.html')
+@@include('../include/advanced-search-results.html')
+@@include('../include/review-modal.html')
+@@include('../include/choose-fields-modal.html')
