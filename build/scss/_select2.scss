@@ -63,7 +63,7 @@
         .select2-selection__choice {
             background-color: $primary;
             border-color: darken($primary, 5%);
-            color: $color-black;
+            color: $color-white;
             margin-top: 8px;
             padding: 0 5px 1px 20px;
         }
@@ -144,7 +144,7 @@
 
 .select2-container--default .select2-results__option[aria-selected=true] {
     background-color: $primary;
-    color: $color-black;
+    color: $color-white;
 }
 /*.form-group .select2-container--default.select2-container--open.select2-container--below.select2-container--open .select2-selection--single,
 .form-group .select2-container--default.select2-container--open .select2-selection--multiple {
